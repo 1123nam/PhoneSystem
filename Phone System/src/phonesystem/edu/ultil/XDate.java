@@ -45,31 +45,37 @@ public class XDate {
         date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
         return date;
     }
-    
-    
-    public static Date now(){
+
+    public static Date now() {
         return new Date();
     }
-    
+
+    public static boolean isAgeEnough(Date dob) {
+        int yearDOB = Integer.parseInt(XDate.toString(dob, "dd/MM/yyyy").substring(6, XDate.toString(dob, "dd/MM/yyyy").length()));
+        int yearNow = Integer.parseInt(XDate.toString(XDate.now(), "dd/MM/yyyy").substring(6, XDate.toString(XDate.now(), "dd/MM/yyyy").length()));
+        return yearNow - yearDOB >= 18;
+    }
+
     public static void main(String[] args) {
-         Date now = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm aa");
-        String dateSt = sdf.format(now);
+        Date now = new Date();
+//        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm aa");
+//        String dateSt = sdf.format(now);
+//        
+//        String hSt = dateSt.substring(0, 2);
+//        String mSt = dateSt.substring(3, 5);
+//        
+//        int hInt = Integer.parseInt(hSt);
+//        int mInt = Integer.parseInt(mSt);
+//        
+//        boolean isAM = dateSt.endsWith("AM");
+//        
+//        System.out.println(now);
+//        System.out.println(dateSt);
+//        System.out.println(hSt);
+//        System.out.println(mSt);
+//        System.out.println(hInt);
+//        System.out.println(mInt);
 
-        String hSt = dateSt.substring(0, 2);
-        String mSt = dateSt.substring(3, 5);
-
-        int hInt = Integer.parseInt(hSt);
-        int mInt = Integer.parseInt(mSt);
-
-        boolean isAM = dateSt.endsWith("AM");
-        
-        System.out.println(now);
-        System.out.println(dateSt);
-        System.out.println(hSt);
-        System.out.println(mSt);
-        System.out.println(hInt);
-        System.out.println(mInt);
-        
+        XDate.isAgeEnough(XDate.toDate("01/01/2005", "dd/MM/yyyy"));
     }
 }
