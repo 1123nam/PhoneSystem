@@ -4,6 +4,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import phonesystem.edu.entity.Luong;
 import phonesystem.edu.ultil.jdbcHelper;
 
@@ -14,18 +16,29 @@ import phonesystem.edu.ultil.jdbcHelper;
 public class LuongDAO extends PhoneSysDAO<Luong, String> {
 
     String SELECT_ALL_SQL = "{CALL getAllLuong}";
+    String INSERT_SQL = "INSERT INTO LUONG (MANHANVIEN, LUONGTRENCA, TONGCALAM,TIENTHUONG, NGAYNHAN,TRANGTHAI,GHICHU) VALUES(?,?,?,?,?,?,?)";
+    String UPDATE_SQL = "UPDATE LUONG  SET MANHANVIEN = ?, LUONGTRENCA = ? , TONGCALAM = ?,TIENTHUONG  = ?, NGAYNHAN  = ?,TRANGTHAI  = ?,GHICHU  = ? WHERE  MALUONG = ?";
 
     String SELECT_LUONG_BY_ID_NHANVIEN = "{CALL getLuongByMaNhanVien(?)}";
 
     @Override
     public void insert(Luong entity) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            jdbcHelper.update(INSERT_SQL, entity.getMaNhanVien(), entity.getLuongTrenCa(), entity.getTongCaLam(), entity.getTienThuong(), entity.getNgayNhan(), entity.getTrangThai(), entity.getGhiChu());
+        } catch (SQLException ex) {
+            Logger.getLogger(LuongDAO.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
+        }
     }
 
     @Override
     public void update(Luong entity) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+  try {
+            jdbcHelper.update(UPDATE_SQL, entity.getMaNhanVien(), entity.getLuongTrenCa(), entity.getTongCaLam(), entity.getTienThuong(), entity.getNgayNhan(), entity.getTrangThai(), entity.getGhiChu(), entity.getMaLuong());
+        } catch (SQLException ex) {
+            Logger.getLogger(LuongDAO.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
+        }    }
 
     @Override
     public void delete(String key) {
@@ -89,12 +102,10 @@ public class LuongDAO extends PhoneSysDAO<Luong, String> {
     }
 
     public List<Object[]> getAllLuong() {
-        String[] cols = {"MaLuong","MaNhanVien","TenNhanVien", "TongCaLam", "LuongTrenCa","TienThuong","Tong luong","NgayNhan","TrangThai","GhiChu"};
+        String[] cols = {"MaLuong", "MaNhanVien", "TenNhanVien", "TongCaLam", "LuongTrenCa", "TienThuong", "Tong luong", "NgayNhan", "TrangThai", "GhiChu"};
         return this.getListOfArray(SELECT_ALL_SQL, cols);
     }
 
-    
-    
     public List<Object[]> getListOfArray(String sql, String[] cols, Object... agrs) {
         List<Object[]> list = new ArrayList<>();
         try {

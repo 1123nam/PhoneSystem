@@ -4,6 +4,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import phonesystem.edu.entity.NhanVien;
 import phonesystem.edu.ultil.jdbcHelper;
 
@@ -19,6 +21,7 @@ public class NhanVienDAO extends PhoneSysDAO<NhanVien, String> {
     private String SELECT_ALL_SQL = "SELECT * FROM NHANVIEN";
     private String SELECT_BY_ID_SQL = "SELECT * FROM NHANVIEN WHERE MANHANVIEN = ?";
     private String SELECT_BY_EMAIL = "SELECT EMAIL FROM NHANVIEN WHERE EMAIL = ?";
+    private String SELECT_SDT = "SELECT SDT FROM NHANVIEN where sdt = ? ";
 
     @Override
     public void insert(NhanVien entity) {
@@ -65,7 +68,7 @@ public class NhanVienDAO extends PhoneSysDAO<NhanVien, String> {
 
     public boolean kiemTraTrungEmail(String Email) throws SQLException {
 
-        ResultSet rs = jdbcHelper.query(SELECT_BY_EMAIL,Email);
+        ResultSet rs = jdbcHelper.query(SELECT_BY_EMAIL, Email);
         while (rs.next() == true) {
             return true;
         }
@@ -126,9 +129,25 @@ public class NhanVienDAO extends PhoneSysDAO<NhanVien, String> {
         return id;
     }
 
+    public boolean isNumPhoneDup(String sdt) {
+
+        ResultSet rs = null;
+        try {
+            rs = jdbcHelper.query(SELECT_SDT, sdt);
+            while (rs.next() == true) {
+                return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(NhanVienDAO.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         NhanVienDAO dao = new NhanVienDAO();
-        System.out.println(dao.getID_NhanVien());
+        System.out.println(dao.isNumPhoneDup("dhfskf"));
+        
     }
 //    public static void main(String[] args) {
 //        NhanVienDAO dao = new NhanVienDAO();
