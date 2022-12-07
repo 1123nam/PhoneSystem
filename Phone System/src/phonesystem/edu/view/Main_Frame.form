@@ -3343,11 +3343,11 @@
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Component id="btn_First_DiemDanh" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                                           <Component id="btn_Previous_DiemDanh" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                                           <Component id="btn_Next_DiemDanh" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                                           <Component id="btn_Last_DiemDanh" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
                                       </Group>
@@ -3624,6 +3624,9 @@
                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tbl_DanhSachDiemDanh_DiemDanhMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -3635,7 +3638,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="98" green="58" red="61" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&lt;&lt;"/>
+                    <Property name="text" type="java.lang.String" value="|&lt;"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_First_DiemDanhActionPerformed"/>
@@ -3649,7 +3652,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="98" green="58" red="61" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="|&lt;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;&lt;"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Previous_DiemDanhActionPerformed"/>
@@ -3663,7 +3666,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="98" green="58" red="61" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&gt;|"/>
+                    <Property name="text" type="java.lang.String" value="&gt;&gt;"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Next_DiemDanhActionPerformed"/>
@@ -3677,7 +3680,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="98" green="58" red="61" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="&gt;&gt;"/>
+                    <Property name="text" type="java.lang.String" value="&gt;|"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Last_DiemDanhActionPerformed"/>
@@ -5531,6 +5534,9 @@
                               </Constraints>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_TenSanPham_SanPham">
+                              <Properties>
+                                <Property name="toolTipText" type="java.lang.String" value="Vui l&#xf2;ng nh&#x1ead;p T&#xea;n s&#x1ea3;n ph&#x1ea9;m !!!"/>
+                              </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                   <AbsoluteConstraints x="139" y="75" width="183" height="-1"/>
@@ -5538,6 +5544,9 @@
                               </Constraints>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_SoLuong_SanPham">
+                              <Properties>
+                                <Property name="toolTipText" type="java.lang.String" value="Vui l&#xf2;ng nh&#x1ead;p S&#x1ed1; l&#x1b0;&#x1ee3;ng !!!"/>
+                              </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                   <AbsoluteConstraints x="139" y="109" width="183" height="-1"/>
@@ -5545,6 +5554,9 @@
                               </Constraints>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_DonGia_SanPham">
+                              <Properties>
+                                <Property name="toolTipText" type="java.lang.String" value="Vui l&#xf2;ng nh&#x1ead;p &#x110;&#x1a1;n gi&#xe1; !!!"/>
+                              </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                   <AbsoluteConstraints x="139" y="139" width="183" height="-1"/>
@@ -5826,7 +5838,7 @@
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="98" green="58" red="61" type="rgb"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="&lt;&lt;"/>
+                                <Property name="text" type="java.lang.String" value="|&lt;"/>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_First_SanPhamActionPerformed"/>
@@ -5840,7 +5852,7 @@
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="98" green="58" red="61" type="rgb"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="|&lt;"/>
+                                <Property name="text" type="java.lang.String" value="&lt;&lt;"/>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Previous_SanPhamActionPerformed"/>
@@ -5854,7 +5866,7 @@
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="98" green="58" red="61" type="rgb"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="&gt;|"/>
+                                <Property name="text" type="java.lang.String" value="&gt;&gt;"/>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Next_SanPhamActionPerformed"/>
@@ -5868,7 +5880,7 @@
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="98" green="58" red="61" type="rgb"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="&gt;&gt;"/>
+                                <Property name="text" type="java.lang.String" value="&gt;|"/>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Last_SanPhamActionPerformed"/>
@@ -7474,6 +7486,9 @@
                           </Layout>
                           <SubComponents>
                             <Component class="javax.swing.JTextField" name="txt_TenKhuyenMai_KhuyenMai">
+                              <Properties>
+                                <Property name="toolTipText" type="java.lang.String" value="Vui l&#xf2;ng nh&#x1ead;p T&#xea;n khuy&#x1ebf;n m&#xe3;i !!!"/>
+                              </Properties>
                               <Events>
                                 <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_TenKhuyenMai_KhuyenMaiKeyReleased"/>
                               </Events>
@@ -7494,6 +7509,9 @@
                               </Constraints>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_GiamGia_KhuyenMai">
+                              <Properties>
+                                <Property name="toolTipText" type="java.lang.String" value="Vui l&#xf2;ng nh&#x1ead;p Gi&#x1ea3;m gi&#xe1; !!!"/>
+                              </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                   <AbsoluteConstraints x="109" y="67" width="183" height="-1"/>

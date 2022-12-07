@@ -2458,11 +2458,16 @@ public class Main_Frame extends javax.swing.JFrame {
                 "STT", "MÃ NHÂN VIÊN", "TÊN NHÂN VIÊN", "CA LÀM", "NGÀY LÀM VIỆC", "GHI CHÚ"
             }
         ));
+        tbl_DanhSachDiemDanh_DiemDanh.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbl_DanhSachDiemDanh_DiemDanhMouseClicked(evt);
+            }
+        });
         jScrollPane6.setViewportView(tbl_DanhSachDiemDanh_DiemDanh);
 
         btn_First_DiemDanh.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_First_DiemDanh.setForeground(new java.awt.Color(97, 88, 152));
-        btn_First_DiemDanh.setText("<<");
+        btn_First_DiemDanh.setText("|<");
         btn_First_DiemDanh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_First_DiemDanhActionPerformed(evt);
@@ -2471,7 +2476,7 @@ public class Main_Frame extends javax.swing.JFrame {
 
         btn_Previous_DiemDanh.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_Previous_DiemDanh.setForeground(new java.awt.Color(97, 88, 152));
-        btn_Previous_DiemDanh.setText("|<");
+        btn_Previous_DiemDanh.setText("<<");
         btn_Previous_DiemDanh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_Previous_DiemDanhActionPerformed(evt);
@@ -2480,7 +2485,7 @@ public class Main_Frame extends javax.swing.JFrame {
 
         btn_Next_DiemDanh.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_Next_DiemDanh.setForeground(new java.awt.Color(97, 88, 152));
-        btn_Next_DiemDanh.setText(">|");
+        btn_Next_DiemDanh.setText(">>");
         btn_Next_DiemDanh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_Next_DiemDanhActionPerformed(evt);
@@ -2489,7 +2494,7 @@ public class Main_Frame extends javax.swing.JFrame {
 
         btn_Last_DiemDanh.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_Last_DiemDanh.setForeground(new java.awt.Color(97, 88, 152));
-        btn_Last_DiemDanh.setText(">>");
+        btn_Last_DiemDanh.setText(">|");
         btn_Last_DiemDanh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_Last_DiemDanhActionPerformed(evt);
@@ -2549,11 +2554,11 @@ public class Main_Frame extends javax.swing.JFrame {
                                     .addContainerGap()))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, card_DiemDanhLayout.createSequentialGroup()
                                 .addComponent(btn_First_DiemDanh)
-                                .addGap(74, 74, 74)
+                                .addGap(65, 65, 65)
                                 .addComponent(btn_Previous_DiemDanh)
-                                .addGap(62, 62, 62)
+                                .addGap(63, 63, 63)
                                 .addComponent(btn_Next_DiemDanh)
-                                .addGap(51, 51, 51)
+                                .addGap(75, 75, 75)
                                 .addComponent(btn_Last_DiemDanh)
                                 .addGap(138, 138, 138))))
                     .addGroup(card_DiemDanhLayout.createSequentialGroup()
@@ -3598,8 +3603,14 @@ public class Main_Frame extends javax.swing.JFrame {
 
         txt_MaSanPham_SanPham.setEditable(false);
         jPanel24.add(txt_MaSanPham_SanPham, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 47, 183, -1));
+
+        txt_TenSanPham_SanPham.setToolTipText("Vui lòng nhập Tên sản phẩm !!!");
         jPanel24.add(txt_TenSanPham_SanPham, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 75, 183, -1));
+
+        txt_SoLuong_SanPham.setToolTipText("Vui lòng nhập Số lượng !!!");
         jPanel24.add(txt_SoLuong_SanPham, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 109, 183, -1));
+
+        txt_DonGia_SanPham.setToolTipText("Vui lòng nhập Đơn giá !!!");
         jPanel24.add(txt_DonGia_SanPham, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 139, 183, -1));
 
         cbo_HangSanXuat_SanPham.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -3669,7 +3680,7 @@ public class Main_Frame extends javax.swing.JFrame {
 
         btn_First_SanPham.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_First_SanPham.setForeground(new java.awt.Color(97, 88, 152));
-        btn_First_SanPham.setText("<<");
+        btn_First_SanPham.setText("|<");
         btn_First_SanPham.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_First_SanPhamActionPerformed(evt);
@@ -3678,7 +3689,7 @@ public class Main_Frame extends javax.swing.JFrame {
 
         btn_Previous_SanPham.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_Previous_SanPham.setForeground(new java.awt.Color(97, 88, 152));
-        btn_Previous_SanPham.setText("|<");
+        btn_Previous_SanPham.setText("<<");
         btn_Previous_SanPham.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_Previous_SanPhamActionPerformed(evt);
@@ -3687,7 +3698,7 @@ public class Main_Frame extends javax.swing.JFrame {
 
         btn_Next_SanPham.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_Next_SanPham.setForeground(new java.awt.Color(97, 88, 152));
-        btn_Next_SanPham.setText(">|");
+        btn_Next_SanPham.setText(">>");
         btn_Next_SanPham.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_Next_SanPhamActionPerformed(evt);
@@ -3696,7 +3707,7 @@ public class Main_Frame extends javax.swing.JFrame {
 
         btn_Last_SanPham.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_Last_SanPham.setForeground(new java.awt.Color(97, 88, 152));
-        btn_Last_SanPham.setText(">>");
+        btn_Last_SanPham.setText(">|");
         btn_Last_SanPham.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_Last_SanPhamActionPerformed(evt);
@@ -4488,6 +4499,7 @@ public class Main_Frame extends javax.swing.JFrame {
         jPanel33.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Quản lý khuyến mãi", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 16), new java.awt.Color(34, 51, 102))); // NOI18N
         jPanel33.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        txt_TenKhuyenMai_KhuyenMai.setToolTipText("Vui lòng nhập Tên khuyến mãi !!!");
         txt_TenKhuyenMai_KhuyenMai.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_TenKhuyenMai_KhuyenMaiKeyReleased(evt);
@@ -4497,6 +4509,8 @@ public class Main_Frame extends javax.swing.JFrame {
 
         jLabel65.setText("Tên khuyến mãi");
         jPanel33.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 32, -1, -1));
+
+        txt_GiamGia_KhuyenMai.setToolTipText("Vui lòng nhập Giảm giá !!!");
         jPanel33.add(txt_GiamGia_KhuyenMai, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 67, 183, -1));
 
         jLabel68.setText("Giảm giá");
@@ -5151,15 +5165,31 @@ public class Main_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_lblHinhAnh_SanPhamMouseClicked
 
     private void btn_Them_SanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Them_SanPhamActionPerformed
-        this.insert_SanPham();
+        if (isNullOnTextFiled(txt_TenSanPham_SanPham, txt_SoLuong_SanPham, txt_DonGia_SanPham)) {
+            if (kiemTraSanPham() == true) {
+                this.insert_SanPham();
+            }
+        }
     }//GEN-LAST:event_btn_Them_SanPhamActionPerformed
 
     private void btn_CapNhat_SanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CapNhat_SanPhamActionPerformed
-        this.update_SanPham();
+        if (row_tbl_SanPham > 0) {
+            if (isNullOnTextFiled(txt_TenSanPham_SanPham, txt_SoLuong_SanPham, txt_DonGia_SanPham)) {
+                if (kiemTraSanPham() == true) {
+                    this.update_SanPham();
+                }
+            }
+        } else {
+            MsgBox.alert(this, "Bạn chưa chọn Sản phẩm !!!");
+        }
     }//GEN-LAST:event_btn_CapNhat_SanPhamActionPerformed
 
     private void btn_Xoa_SanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Xoa_SanPhamActionPerformed
-        this.delete_SanPham();
+        if (row_tbl_SanPham > 0) {
+            this.delete_SanPham();
+        } else {
+            MsgBox.alert(this, "Bạn chưa chọn Sản phẩm !!!");
+        }
     }//GEN-LAST:event_btn_Xoa_SanPhamActionPerformed
 
     private void btn_Moi_SanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Moi_SanPhamActionPerformed
@@ -5225,8 +5255,7 @@ public class Main_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_Last_SanPhamActionPerformed
 
     private void tbl_DanhSachSanPham_DaXoa_SanPhamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_DanhSachSanPham_DaXoa_SanPhamMouseClicked
-        this.row_tbl_SanPham = tbl_DanhSachSanPham_DaXoa_SanPham.getSelectedRow();
-        this.edit_SanPham_DaXoa();
+        this.row_tbl_SanPham_DaXoa = tbl_DanhSachSanPham_DaXoa_SanPham.getSelectedRow();
     }//GEN-LAST:event_tbl_DanhSachSanPham_DaXoa_SanPhamMouseClicked
 
     private void btn_First_SanPham_DaXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_First_SanPham_DaXoaActionPerformed
@@ -5272,7 +5301,11 @@ public class Main_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_Last_SanPham_DaXoaActionPerformed
 
     private void btn_KhoiPhuc_SanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_KhoiPhuc_SanPhamActionPerformed
-        this.khoiPhuc_SanPham_DaXoa();
+        if (row_tbl_SanPham_DaXoa != -1) {
+            this.khoiPhuc_SanPham_DaXoa();
+        } else {
+            MsgBox.alert(this, "Bạn chưa chọn Sản phẩm !!!");
+        }
     }//GEN-LAST:event_btn_KhoiPhuc_SanPhamActionPerformed
 
     private void rdo_NghiViec_NhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdo_NghiViec_NhanVienActionPerformed
@@ -5400,19 +5433,13 @@ public class Main_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_tbl_DSChuaTaiKhoan_TaiKhoanMouseClicked
 
     private void btn_DiemDanh_DiemDanhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_DiemDanh_DiemDanhActionPerformed
-        Date now = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm aa");
-        String dateSt = sdf.format(now);
-
-        String hSt = dateSt.substring(0, 2);
-        String mSt = dateSt.substring(3, 5);
-
-        int hInt = Integer.parseInt(hSt);
-        int mInt = Integer.parseInt(mSt);
-
-        boolean isAM = dateSt.endsWith("AM");
-        this.insert_DiemDanh();
-        btn_DiemDanh_DiemDanh.setEnabled(false);
+        if (kiemTraDiemDanh() == true) {
+            this.insert_DiemDanh();
+            btn_DiemDanh_DiemDanh.setEnabled(false);
+        } else {
+            MsgBox.alert(this, "Bạn đã điểm danh rồi !!!");
+            btn_DiemDanh_DiemDanh.setEnabled(false);
+        }
     }//GEN-LAST:event_btn_DiemDanh_DiemDanhActionPerformed
 
     private void btn_First_DiemDanhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_First_DiemDanhActionPerformed
@@ -5663,7 +5690,11 @@ public class Main_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_dcs_locNgayTao_BanHangPropertyChange
 
     private void btn_Them_KhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Them_KhuyenMaiActionPerformed
-        this.insert_KhuyenMai();
+        if (isNullOnTextFiled(txt_TenKhuyenMai_KhuyenMai, txt_GiamGia_KhuyenMai)) {
+            if (kiemTraKhuyenMai() == true) {
+                this.insert_KhuyenMai();
+            }
+        }
     }//GEN-LAST:event_btn_Them_KhuyenMaiActionPerformed
 
     private void btn_Moi_KhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Moi_KhuyenMaiActionPerformed
@@ -5799,11 +5830,23 @@ public class Main_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_tbl_DanhSachKhuyenMaiCoSanPham_KhuyenMaiMouseClicked
 
     private void btn_CapNhat_KhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CapNhat_KhuyenMaiActionPerformed
-        this.update_KhuyenMai();
+        if (row_tbl_KhuyenMai > 0) {
+            if (isNullOnTextFiled(txt_GiamGia_KhuyenMai)) {
+                if (kiemTraKhuyenMai() == true) {
+                    this.update_KhuyenMai();
+                }
+            }
+        } else {
+            MsgBox.alert(this, "Bạn chưa chọn Khuyến mãi !!!");
+        }
     }//GEN-LAST:event_btn_CapNhat_KhuyenMaiActionPerformed
 
     private void btn_Xoa_KhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Xoa_KhuyenMaiActionPerformed
-        this.delete_KhuyenMai();
+        if (row_tbl_KhuyenMai > 0) {
+            this.delete_KhuyenMai();
+        } else {
+            MsgBox.alert(this, "Bạn chưa chọn Khuyến mãi !!!");
+        }
     }//GEN-LAST:event_btn_Xoa_KhuyenMaiActionPerformed
 
     private void txt_TimKhuyenMai_KhuyenMaiKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_TimKhuyenMai_KhuyenMaiKeyReleased
@@ -5940,6 +5983,10 @@ public class Main_Frame extends javax.swing.JFrame {
     private void txt_TenNhanVien_NhanVienFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_TenNhanVien_NhanVienFocusLost
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_TenNhanVien_NhanVienFocusLost
+
+    private void tbl_DanhSachDiemDanh_DiemDanhMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_DanhSachDiemDanh_DiemDanhMouseClicked
+        this.row_tbl_DiemDanh = tbl_DanhSachDiemDanh_DiemDanh.getSelectedRow();
+    }//GEN-LAST:event_tbl_DanhSachDiemDanh_DiemDanhMouseClicked
 
 //    Mouse event
     public void onClick(JPanel jpanel) {
@@ -6437,6 +6484,7 @@ public class Main_Frame extends javax.swing.JFrame {
 //                         START_CARD_SANPHAM
     int row_tbl_SanPham = -1;
     DefaultTableModel tableModelSanPham;
+    int row_tbl_SanPham_DaXoa = -1;
 
     private void init_SanPham() {
         fillTable_SanPham();
@@ -6649,6 +6697,28 @@ public class Main_Frame extends javax.swing.JFrame {
         model.addElement("Khác");
     }
 
+    public boolean kiemTraSanPham() {
+        try {
+            if (Integer.parseInt(txt_SoLuong_SanPham.getText()) < 0) {
+                MsgBox.alert(this, "Số lượng Sản phẩm không được nhỏ hơn 0 !!!");
+                return false;
+            }
+        } catch (NumberFormatException e) {
+            MsgBox.alert(this, "Số lượng Sản phẩm phải là giá trị số nguyên !!!");
+            return false;
+        }
+        try {
+            if (Float.parseFloat(txt_DonGia_SanPham.getText()) < 0) {
+                MsgBox.alert(this, "Đơn giá Sản phẩm không được nhỏ hơn 0 !!!");
+                return false;
+            }
+        } catch (NumberFormatException e) {
+            MsgBox.alert(this, "Đơn giá Sản phẩm phải là giá trị số !!!");
+            return false;
+        }
+        return true;
+    }
+
 //                          END_CARD_SANPHAM  
     DiemDanhDAO ddDao = new DiemDanhDAO();
     int row_tbl_DiemDanh = -1;
@@ -6661,6 +6731,34 @@ public class Main_Frame extends javax.swing.JFrame {
     }
 
     DefaultTableModel model_DiemDanh;
+
+    private boolean kiemTraDiemDanh() {
+        String dateSt = XDate.toString(XDate.now(), "HH:mm aa");
+
+        String hSt = dateSt.substring(0, 2);
+        String mSt = dateSt.substring(3, 5);
+
+        int hInt = Integer.parseInt(hSt);
+        int mInt = Integer.parseInt(mSt);
+        boolean isAM = dateSt.endsWith("AM");
+
+        String maNV = Auth.user.getMaNhanVien();
+        String caLam = "";
+        if (isAM == true) {
+            caLam = "Ca Sáng";
+        }
+        if (isAM == false) {
+            caLam = "Ca Chiều";
+        }
+        String ngayLamViec = (XDate.toString(XDate.now(), "dd/MM/yyyy"));
+
+        for (int i = 0; i < tbl_DanhSachDiemDanh_DiemDanh.getRowCount(); i++) {
+            if (tbl_DanhSachDiemDanh_DiemDanh.getValueAt(i, 1).toString().equals(maNV) && tbl_DanhSachDiemDanh_DiemDanh.getValueAt(i, 3).toString().equals(caLam) && tbl_DanhSachDiemDanh_DiemDanh.getValueAt(i, 4).toString().equals(ngayLamViec)) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     private void fillTable_DiemDanh() {
         model_DiemDanh = (DefaultTableModel) tbl_DanhSachDiemDanh_DiemDanh.getModel();
@@ -6703,8 +6801,10 @@ public class Main_Frame extends javax.swing.JFrame {
     }
 
     private void fillLable_DiemDanh() {
-//        lbl_MaNhanVien_DiemDanh.setText(Auth.user.getMaNhanVien());
-//        lbl_TenNhanVien_DiemDanh.setText(ddDao.selectByTenNhanVien(Auth.user.getMaNhanVien()));
+        if (Auth.isLogin()) {
+            lbl_MaNhanVien_DiemDanh.setText(Auth.user.getMaNhanVien());
+            lbl_TenNhanVien_DiemDanh.setText(ddDao.selectByTenNhanVien(Auth.user.getMaNhanVien()));
+        }
 
         Date now = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm aa");
@@ -6718,16 +6818,15 @@ public class Main_Frame extends javax.swing.JFrame {
 
         boolean isAM = dateSt.endsWith("AM");
 
-        if (isAM == true && hInt >= 7 && hInt <= 11) {
+        if (isAM == true) {
             lbl_CaLam_DiemDanh.setText("Ca Sáng");
         }
-        if (isAM == false && hInt >= 13 && hInt <= 17) {
+        if (isAM == false) {
             lbl_CaLam_DiemDanh.setText("Ca Chiều");
         }
         lbl_NgayLamViec_DiemDanh.setText(XDate.toString(new Date(), "dd/MM/yyyy"));
 
-        // if ((hInt <= 7 && mInt <= 30 && isAM == true) || (hInt <= 13 && mInt <= 30 && isAM == false)) {
-        if ((hInt <= 7 && mInt <= 30 && isAM == true) || (hInt <= 13 && mInt <= 30 && isAM == false)) {
+        if ((hInt >= 7 && hInt < 8 && mInt <= 30 && isAM == true) || (hInt >= 13 && hInt < 22 && mInt <= 30 && isAM == false)) {
             btn_DiemDanh_DiemDanh.setEnabled(true);
         } else {
             btn_DiemDanh_DiemDanh.setEnabled(false);
@@ -6913,6 +7012,42 @@ public class Main_Frame extends javax.swing.JFrame {
             e.printStackTrace();
             MsgBox.alert(this, "Lỗi truy vấn dữ liệu!");
         }
+    }
+
+    public boolean kiemTraKhuyenMai() {
+        if (dcs_NgayBatDau_KhuyenMai.getCalendar() == null) {
+            MsgBox.alert(this, "Bạn chưa chọn Ngày bắt đầu !!!");
+            return false;
+        } else if (dcs_NgayKetThuc_KhuyenMai.getCalendar() == null) {
+            MsgBox.alert(this, "Bạn chưa chọn Ngày kết thúc !!!");
+            return false;
+        }
+
+        try {
+            if (Float.parseFloat(txt_GiamGia_KhuyenMai.getText()) < 0) {
+                MsgBox.alert(this, "Giá giảm phải lớn hơn 0 !!!");
+                return false;
+            }
+        } catch (Exception e) {
+            MsgBox.alert(this, "Giá giảm phải là giá trị số !!!");
+            return false;
+        }
+
+        Date dateNgayBatDau, dateNgayKetThuc;
+        dateNgayBatDau = dcs_NgayBatDau_KhuyenMai.getDate();
+        dateNgayKetThuc = dcs_NgayKetThuc_KhuyenMai.getDate();
+
+        if (dateNgayBatDau.getYear() > dateNgayKetThuc.getYear()) {
+            MsgBox.alert(this, "Ngày kết thúc không thể trước ngày ngày bắt đầu !!!");
+            return false;
+        } else if (dateNgayBatDau.getYear() == dateNgayKetThuc.getYear() && dateNgayBatDau.getMonth() > dateNgayKetThuc.getMonth()) {
+            MsgBox.alert(this, "Ngày kết thúc không thể trước ngày ngày bắt đầu !!!");
+            return false;
+        } else if (dateNgayBatDau.getYear() == dateNgayKetThuc.getYear() && dateNgayBatDau.getMonth() == dateNgayKetThuc.getMonth() && dateNgayBatDau.getDay() > dateNgayKetThuc.getDay()) {
+            MsgBox.alert(this, "Ngày kết thúc không thể trước ngày ngày bắt đầu!!!");
+            return false;
+        }
+        return true;
     }
 
 //                       END_CARD_KHUYENMAI

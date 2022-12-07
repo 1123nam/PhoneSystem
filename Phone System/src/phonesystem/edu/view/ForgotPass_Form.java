@@ -133,7 +133,7 @@ public class ForgotPass_Form extends javax.swing.JFrame {
                     this.dispose();
                 }
             } else {
-                MsgBox.alert(this, "Email này không có trong danh sách. Vui lòng nhập Email khác!!!");
+                MsgBox.alert(this, "Email này không có trong danh sách Nhân viên. Vui lòng nhập Email khác!!!");
                 return;
             }
         } catch (SQLException ex) {
