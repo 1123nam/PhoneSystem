@@ -37,7 +37,6 @@ public class Login_Frame extends javax.swing.JFrame {
         initComponents();
         this.requestFocus();
         this.init();
-
     }
 
     private void init() {
@@ -86,12 +85,13 @@ public class Login_Frame extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         txt_TenDangNhap = new javax.swing.JTextField();
         txt_MatKhau = new javax.swing.JPasswordField();
+        lbl_quenmatkhau = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         lblLogin = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -174,6 +174,23 @@ public class Login_Frame extends javax.swing.JFrame {
         });
         jPanel3.add(txt_MatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 111, 232, 25));
 
+        lbl_quenmatkhau.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lbl_quenmatkhau.setForeground(new java.awt.Color(0, 0, 0));
+        lbl_quenmatkhau.setText("Quên mật khẩu?");
+        lbl_quenmatkhau.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lbl_quenmatkhau.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl_quenmatkhauMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbl_quenmatkhauMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbl_quenmatkhauMouseExited(evt);
+            }
+        });
+        jPanel3.add(lbl_quenmatkhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, -1, -1));
+
         jPanel1.add(jPanel3);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -193,15 +210,20 @@ public class Login_Frame extends javax.swing.JFrame {
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("OR");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 59, -1, -1));
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/phonesystem/edu/img/Login_with_Google.png"))); // NOI18N
-        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 89, -1, 29));
         jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 67, 114, 10));
 
         jSeparator2.setMaximumSize(new java.awt.Dimension(120, 1));
         jSeparator2.setMinimumSize(new java.awt.Dimension(120, 1));
         jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 65, 120, 12));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/phonesystem/edu/img/Group 19.png"))); // NOI18N
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 250, 30));
 
         jPanel1.add(jPanel2);
 
@@ -256,6 +278,23 @@ public class Login_Frame extends javax.swing.JFrame {
         this.Login();
     }//GEN-LAST:event_txt_MatKhauActionPerformed
 
+    private void lbl_quenmatkhauMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_quenmatkhauMouseClicked
+        new NhapEmail().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_lbl_quenmatkhauMouseClicked
+
+    private void lbl_quenmatkhauMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_quenmatkhauMouseEntered
+        lbl_quenmatkhau.setForeground(new Color(15,63,208));
+    }//GEN-LAST:event_lbl_quenmatkhauMouseEntered
+
+    private void lbl_quenmatkhauMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_quenmatkhauMouseExited
+        lbl_quenmatkhau.setForeground(new Color(0,0,0));
+    }//GEN-LAST:event_lbl_quenmatkhauMouseExited
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jLabel5MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -284,8 +323,8 @@ public class Login_Frame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -295,6 +334,7 @@ public class Login_Frame extends javax.swing.JFrame {
     private javax.swing.JLabel lblEye;
     private javax.swing.JLabel lblLogin;
     private javax.swing.JLabel lblSlash;
+    private javax.swing.JLabel lbl_quenmatkhau;
     private javax.swing.JPasswordField txt_MatKhau;
     private javax.swing.JTextField txt_TenDangNhap;
     // End of variables declaration//GEN-END:variables
@@ -323,7 +363,7 @@ public class Login_Frame extends javax.swing.JFrame {
         String Pass = String.valueOf(txt_MatKhau.getPassword());
 
         TaiKhoan tk = dao.selectByTenDangNhap(tenDN);
-        
+
         if (check()) {
             if (tk == null) {
                 MsgBox.alert(this, "Sai tên đăng nhập");

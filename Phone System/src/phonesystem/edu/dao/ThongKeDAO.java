@@ -4,7 +4,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import phonesystem.edu.ultil.XDate;
 import phonesystem.edu.ultil.jdbcHelper;
 
 /**
@@ -63,13 +62,13 @@ public class ThongKeDAO {
         return this.getListOfArray(sql, cols, ngayBatDau, ngayKetThuc);
     }
 
-    public List<Object[]> getTongDoanhThu() {
-
-        String sql = "{CALL getTongDoanhThu}";
-        String[] cols = {"TenSanPham", "TongDoanhThu"};
-
-        return this.getListOfArray(sql, cols);
-    }
+//    public List<Object[]> getTongDoanhThu() {
+//
+//        String sql = "{CALL getTongDoanhThu}";
+//        String[] cols = {"TenSanPham", "TongDoanhThu"};
+//
+//        return this.getListOfArray(sql, cols);
+//    }
 
     public List<Object[]> getThongKeFull() {
 

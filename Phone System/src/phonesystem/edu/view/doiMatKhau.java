@@ -16,12 +16,12 @@ import phonesystem.edu.ultil.MsgBox;
  *
  * @author HienTran
  */
-public class ResetPassword_Frame extends javax.swing.JFrame {
+public class doiMatKhau extends javax.swing.JFrame {
 
     /**
      * Creates new form ResetPassword_Frame
      */
-    public ResetPassword_Frame() {
+    public doiMatKhau() {
         initComponents();
         this.init();
     }
@@ -207,7 +207,7 @@ public class ResetPassword_Frame extends javax.swing.JFrame {
             return;
         } else {
             try {
-                tkDAO.updateByEmail(txtPassword.getText(), ForgotPass_Form.email);
+                tkDAO.updateByEmail(txtPassword.getText(), NhapEmail.email);
                 MsgBox.alert(this, "Lấy lại mật khẩu thành công!!!");
                 new Login_Frame().setVisible(true);
                 this.dispose();
@@ -239,7 +239,7 @@ public class ResetPassword_Frame extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new ResetPassword_Frame().setVisible(true);
+            new doiMatKhau().setVisible(true);
         });
     }
 

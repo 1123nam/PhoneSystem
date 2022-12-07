@@ -15,12 +15,12 @@ import phonesystem.edu.ultil.MsgBox;
  *
  * @author HienTran
  */
-public class Enter_OPT_Form extends javax.swing.JFrame {
+public class nhapOTP extends javax.swing.JFrame {
 
     /**
      * Creates new form Enter_OPT_Form
      */
-    public Enter_OPT_Form() {
+    public nhapOTP() {
         initComponents();
         this.initComponents();
         this.init();
@@ -162,7 +162,7 @@ public class Enter_OPT_Form extends javax.swing.JFrame {
         }
         if (String.valueOf(Email.ranDom).equals(txtOTP.getText())) {
              MsgBox.alert(this, "Mã OTP chính xác!!!");
-            new ResetPassword_Frame().setVisible(true);
+            new doiMatKhau().setVisible(true);
             this.dispose();
         } else {
             MsgBox.alert(this, "Mã OTP không chính xác!!!");
@@ -199,13 +199,13 @@ public class Enter_OPT_Form extends javax.swing.JFrame {
 //                }
 //            }
 //        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(Enter_OPT_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(nhapOTP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(Enter_OPT_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(nhapOTP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(Enter_OPT_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(nhapOTP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(Enter_OPT_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(nhapOTP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        }
 
         try {
@@ -217,7 +217,7 @@ public class Enter_OPT_Form extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Enter_OPT_Form().setVisible(true);
+                new nhapOTP().setVisible(true);
             }
         });
     }

@@ -20,14 +20,14 @@ import phonesystem.edu.ultil.MsgBox;
  *
  * @author HienTran
  */
-public class ForgotPass_Form extends javax.swing.JFrame {
+public class NhapEmail extends javax.swing.JFrame {
 
     public static String email = "";
 
     /**
      * Creates new form Register_Form
      */
-    public ForgotPass_Form() {
+    public NhapEmail() {
         initComponents();
         this.init();
     }
@@ -129,7 +129,7 @@ public class ForgotPass_Form extends javax.swing.JFrame {
             if (nvDAO.kiemTraTrungEmail(txtEmail.getText()) == true) {
                 if (Email.sendEmail(txtEmail.getText()) == true) {
                     MsgBox.alert(this, "Gửi Mail thành công. Vui lòng kiểm tra Email của bạn!!!");
-                    new Enter_OPT_Form().setVisible(true);
+                    new nhapOTP().setVisible(true);
                     this.dispose();
                 }
             } else {
@@ -137,7 +137,7 @@ public class ForgotPass_Form extends javax.swing.JFrame {
                 return;
             }
         } catch (SQLException ex) {
-            Logger.getLogger(ForgotPass_Form.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(NhapEmail.class.getName()).log(Level.SEVERE, null, ex);
         }
 
 
@@ -173,13 +173,13 @@ public class ForgotPass_Form extends javax.swing.JFrame {
 //                }
 //            }
 //        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(ForgotPass_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(NhapEmail.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(ForgotPass_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(NhapEmail.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(ForgotPass_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(NhapEmail.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(ForgotPass_Form.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//            java.util.logging.Logger.getLogger(NhapEmail.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        }
 
         try {
@@ -192,7 +192,7 @@ public class ForgotPass_Form extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ForgotPass_Form().setVisible(true);
+                new NhapEmail().setVisible(true);
             }
         });
     }
