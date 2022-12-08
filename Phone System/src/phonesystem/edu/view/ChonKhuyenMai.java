@@ -79,6 +79,8 @@ public class ChonKhuyenMai extends javax.swing.JDialog {
         ));
         jScrollPane1.setViewportView(tbl_DanhSachKhuyenMai_KhuyenMai);
 
+        btn_ThemKhuyenMai.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_ThemKhuyenMai.setForeground(new java.awt.Color(0, 51, 255));
         btn_ThemKhuyenMai.setText("Thêm Khuyến Mãi");
         btn_ThemKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +89,7 @@ public class ChonKhuyenMai extends javax.swing.JDialog {
         });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 51, 255));
         jLabel1.setText("DANH SÁCH KHUYẾN MÃI");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -110,7 +113,7 @@ public class ChonKhuyenMai extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_ThemKhuyenMai, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
+                .addComponent(btn_ThemKhuyenMai, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
                 .addGap(12, 12, 12))
         );
 

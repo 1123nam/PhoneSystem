@@ -109,13 +109,13 @@ public class doiMatKhau extends javax.swing.JFrame {
 
         lblSpantext.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblSpantext.setForeground(new java.awt.Color(131, 131, 131));
-        lblSpantext.setText("Confirm new password");
+        lblSpantext.setText("Nhập lại mật khẩu mới");
         jPanel2.add(lblSpantext, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 168, 140, 23));
 
         lblSpantext1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblSpantext1.setForeground(new java.awt.Color(131, 131, 131));
-        lblSpantext1.setText("New Pass");
-        jPanel2.add(lblSpantext1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 60, 23));
+        lblSpantext1.setText("Mật khẩu mới");
+        jPanel2.add(lblSpantext1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 90, 23));
 
         txtConfirm.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(131, 131, 131)));
         txtConfirm.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -207,7 +207,7 @@ public class doiMatKhau extends javax.swing.JFrame {
             return;
         } else {
             try {
-                tkDAO.updateByEmail(txtPassword.getText(), NhapEmail.email);
+                tkDAO.updateByEmail(txtPassword.getText(), nhapEmail.email);
                 MsgBox.alert(this, "Lấy lại mật khẩu thành công!!!");
                 new Login_Frame().setVisible(true);
                 this.dispose();

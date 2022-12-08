@@ -279,7 +279,7 @@ public class Login_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_MatKhauActionPerformed
 
     private void lbl_quenmatkhauMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_quenmatkhauMouseClicked
-        new NhapEmail().setVisible(true);
+        new nhapEmail().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_lbl_quenmatkhauMouseClicked
 

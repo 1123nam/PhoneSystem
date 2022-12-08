@@ -75,7 +75,7 @@ public class nhapOTP extends javax.swing.JFrame {
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 262, 60));
 
         txtOTP.setForeground(new java.awt.Color(113, 113, 113));
-        txtOTP.setText("Enter OTP here");
+        txtOTP.setText("Nhập mã OTP");
         txtOTP.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         txtOTP.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
