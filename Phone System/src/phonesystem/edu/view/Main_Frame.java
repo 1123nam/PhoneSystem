@@ -3229,6 +3229,11 @@ public class Main_Frame extends javax.swing.JFrame {
                 txt_SoDienThoai_NhanVienActionPerformed(evt);
             }
         });
+        txt_SoDienThoai_NhanVien.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt_SoDienThoai_NhanVienKeyReleased(evt);
+            }
+        });
 
         txt_Email_NhanVien.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         txt_Email_NhanVien.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -5963,15 +5968,13 @@ public class Main_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_dc_NgaySinh_NhanVienPropertyChange
 
     private void txt_SoDienThoai_NhanVienFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_SoDienThoai_NhanVienFocusLost
-        this.checkSDTNhanVien(txt_SoDienThoai_NhanVien.getText());
     }//GEN-LAST:event_txt_SoDienThoai_NhanVienFocusLost
 
     private void txt_DiaChi_NhanVienFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_DiaChi_NhanVienFocusLost
-        this.checkDiaChiNhanVien(txt_DiaChi_NhanVien.getText());
     }//GEN-LAST:event_txt_DiaChi_NhanVienFocusLost
 
     private void txt_Email_NhanVienFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_Email_NhanVienFocusLost
-        this.checkEmail(txt_Email_NhanVien.getText());
+       
     }//GEN-LAST:event_txt_Email_NhanVienFocusLost
 
     private void txt_CCCD_NhanVienKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_CCCD_NhanVienKeyReleased
@@ -5982,7 +5985,6 @@ public class Main_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_CCCD_NhanVienKeyReleased
 
     private void txt_CCCD_NhanVienFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_CCCD_NhanVienFocusLost
-        this.checkCCCD(txt_CCCD_NhanVien.getText());
     }//GEN-LAST:event_txt_CCCD_NhanVienFocusLost
 
     private void txt_TenNhanVien_NhanVienFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_TenNhanVien_NhanVienFocusLost
@@ -6067,8 +6069,16 @@ public class Main_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_TimKiemLuongTheoNgay_LuongActionPerformed
 
     private void cbo_MaNhanVien_LuongMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbo_MaNhanVien_LuongMouseClicked
-this.btn_TinhLuong_Luong.setEnabled(true);
+        this.btn_TinhLuong_Luong.setEnabled(true);
+        this.btn_CapNhatLuong_Luong.setEnabled(false);
     }//GEN-LAST:event_cbo_MaNhanVien_LuongMouseClicked
+
+    private void txt_SoDienThoai_NhanVienKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_SoDienThoai_NhanVienKeyReleased
+        if (txt_SoDienThoai_NhanVien.getText().length() > 10) {
+            txt_SoDienThoai_NhanVien.setText(txt_SoDienThoai_NhanVien.getText().substring(0, 10));
+            return;
+        }
+    }//GEN-LAST:event_txt_SoDienThoai_NhanVienKeyReleased
 
 //    Mouse event
     public void onClick(JPanel jpanel) {
@@ -8380,6 +8390,7 @@ this.btn_TinhLuong_Luong.setEnabled(true);
 
         txt_GhiChu_NhanVien.setText(ghiChu);
         this.btn_CapNhat_NhanVien.setEnabled(true);
+        this.btn_Them_NhanVien.setEnabled(false);
     }
 
     private void chonAnh(JLabel lbl) {
@@ -8451,10 +8462,6 @@ this.btn_TinhLuong_Luong.setEnabled(true);
             return;
         }
         NhanVien nv = this.getFormNhanVien();
-        nhanVienDAO.update(nv);
-        MsgBox.alert(this, "Cập nhật thông tin Nhân Viên thành công !");
-        this.fillToTable_NhanVien_NhanVien();
-        this.FillTable_tbl_DSChuaTaiKhoan_TaiKhoan();
         try {
             nhanVienDAO.insert(nv);
             this.fillToTable_NhanVien_NhanVien();
@@ -8500,7 +8507,7 @@ this.btn_TinhLuong_Luong.setEnabled(true);
                 CardLayout playout = (CardLayout) pnl_MainDisplayCard.getLayout();
                 playout.show(pnl_MainDisplayCard, "card_TaiKhoan");
 
-                this.FillTable_tbl_DSChuaTaiKhoan_TaiKhoan();
+               
                 txt_MaNV_TaiKhoan.setText(txt_MaNhanVien_NhanVien.getText());
                 txt_TenDangNhap_TaiKhoan.requestFocus();
             }
@@ -8528,6 +8535,8 @@ this.btn_TinhLuong_Luong.setEnabled(true);
             nhanVienDAO.update(nv);
             MsgBox.alert(this, "Cập nhật thông tin Nhân Viên thành công !");
             this.fillToTable_NhanVien_NhanVien();
+            this.FillTable_tbl_DSChuaTaiKhoan_TaiKhoan();
+            
             isUpdateNhanVien = false;
         } catch (Exception e) {
             MsgBox.alert(this, "Cập nhật thông tin Nhân Viên thất bại !");
@@ -8681,10 +8690,7 @@ this.btn_TinhLuong_Luong.setEnabled(true);
         return true;
     }
 
-    private boolean checkAgeNhanVien() {
-        return XDate.isAgeEnough(dc_NgaySinh_NhanVien.getDate());
-
-    }
+   
     //END_CARD_NHANVIEN
     //START_CARD_KHACHHANG
     DefaultTableModel tableModelKhachHang_KhachHang, tableModelKhachHang_KhachHang_DaXoa;
@@ -9074,7 +9080,6 @@ this.btn_TinhLuong_Luong.setEnabled(true);
         } catch (Exception e) {
             MsgBox.alert(this, "Vui lòng nhập đúng định dạng");
             txt_TienThuong_Luong.requestFocus();
-            e.printStackTrace();
             return;
         }
         tongLuong = (luongTrenCa * tongCa) + tienThuong;
@@ -9089,6 +9094,7 @@ this.btn_TinhLuong_Luong.setEnabled(true);
             luongDAO.insert(luong);
             MsgBox.alert(this, "Tính lương thành công ! ");
             this.fillTableLuong_Luong();
+
         } catch (Exception e) {
             MsgBox.alert(this, "Tính lương thất bại ! ");
             e.printStackTrace();

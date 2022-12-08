@@ -4865,6 +4865,7 @@
                                 <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_SoDienThoai_NhanVienFocusLost"/>
                                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txt_SoDienThoai_NhanVienMouseClicked"/>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_SoDienThoai_NhanVienActionPerformed"/>
+                                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_SoDienThoai_NhanVienKeyReleased"/>
                               </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_Email_NhanVien">
