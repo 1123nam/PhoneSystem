@@ -8379,6 +8379,7 @@ this.btn_TinhLuong_Luong.setEnabled(true);
         }
 
         txt_GhiChu_NhanVien.setText(ghiChu);
+        this.btn_CapNhat_NhanVien.setEnabled(true);
     }
 
     private void chonAnh(JLabel lbl) {
