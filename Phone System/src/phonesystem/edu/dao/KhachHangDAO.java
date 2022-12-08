@@ -20,6 +20,7 @@ public class KhachHangDAO extends PhoneSysDAO<KhachHang, String> {
     private String SELECT_ALL_SQL = "SELECT * FROM KHACHHANG";
     private String SELECT_BY_ID_SQL = "SELECT * FROM KHACHHANG WHERE MAKHACHHANG = ?";
     private String SELECT_LAST_ID = "select top 1 MaKhachHang from KhachHang order by MaKhachHang  desc";
+    private String SELECT_SDT = "SELECT * FROM KHACHhANG WHERE SDT = ? ";
 
     @Override
     public void insert(KhachHang entity) {
@@ -100,6 +101,21 @@ public class KhachHangDAO extends PhoneSysDAO<KhachHang, String> {
         }
 
         return id;
+    }
+    
+    
+      public KhachHang getKhachHangBySDT(String sdt) {
+        try {
+            ResultSet rs = jdbcHelper.query(SELECT_SDT,sdt);
+            while (rs.next()) {
+                KhachHang kh = new KhachHang(rs.getString(1), rs.getString(2), rs.getBoolean(3), rs.getString(4), rs.getBoolean(5), rs.getString(6));
+                return kh;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
  public static void main(String[] args) {
         KhachHangDAO dao = new KhachHangDAO();

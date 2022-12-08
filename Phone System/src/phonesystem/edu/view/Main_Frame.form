@@ -1389,8 +1389,8 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jPanel3" pref="1071" max="32767" attributes="0"/>
                                           <Group type="102" attributes="0">
-                                              <Component id="jPanel12" max="32767" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="jPanel12" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
                                               <Component id="jPanel13" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -1668,14 +1668,14 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="pieChart_Tong" max="32767" attributes="0"/>
+                                          <Component id="pieChart_Tong" pref="354" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="pieChart_Tong" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -1709,37 +1709,37 @@
                               <Layout>
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                                          <Component id="pieChart_TheoNgay" min="-2" pref="310" max="-2" attributes="0"/>
-                                          <EmptySpace pref="52" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="pieChart_TheoNgay" min="-2" pref="349" max="-2" attributes="0"/>
+                                          <EmptySpace pref="70" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel28" min="-2" pref="180" max="-2" attributes="0"/>
                                               <Component id="dcs_NgayBatDau_ThongKe_DoanhThu" min="-2" pref="180" max="-2" attributes="0"/>
                                               <Component id="jLabel27" min="-2" pref="180" max="-2" attributes="0"/>
                                               <Component id="dcs_NgayKetThuc_ThongKe_DoanhThu" min="-2" pref="180" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="142" max="32767" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                                          <Component id="pieChart_TheoNgay" min="-2" pref="288" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                                           <Component id="jLabel28" min="-2" pref="35" max="-2" attributes="0"/>
                                           <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
                                           <Component id="dcs_NgayBatDau_ThongKe_DoanhThu" min="-2" pref="35" max="-2" attributes="0"/>
-                                          <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                           <Component id="jLabel27" min="-2" pref="35" max="-2" attributes="0"/>
                                           <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
                                           <Component id="dcs_NgayKetThuc_ThongKe_DoanhThu" min="-2" pref="35" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
+                                          <EmptySpace pref="75" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="pieChart_TheoNgay" max="32767" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -2076,36 +2076,30 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jScrollPane18" alignment="0" max="32767" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="txt_TimSoDienThoaiKhachHang_KhachHang" min="-2" pref="337" max="-2" attributes="0"/>
-                                              <EmptySpace pref="81" max="32767" attributes="0"/>
-                                              <Component id="btn_ThemKhachHangVaoHoaDon_KhachHang" pref="195" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jScrollPane18" pref="613" max="32767" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Component id="txt_TimSoDienThoaiKhachHang_KhachHang" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                              <Component id="jPanel50" min="-2" pref="346" max="-2" attributes="0"/>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jPanel50" min="-2" pref="382" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="txt_TimSoDienThoaiKhachHang_KhachHang" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                          <Component id="btn_ThemKhachHangVaoHoaDon_KhachHang" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="txt_TimSoDienThoaiKhachHang_KhachHang" pref="30" max="32767" attributes="0"/>
+                                          <Component id="jPanel50" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jScrollPane18" pref="396" max="32767" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jPanel50" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane18" pref="392" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -2129,6 +2123,7 @@
                                         <Column editable="false" title="GHI CH&#xda;" type="java.lang.Object"/>
                                       </Table>
                                     </Property>
+                                    <Property name="toolTipText" type="java.lang.String" value="Nh&#x1ea5;p &#x111;&#xfa;p chu&#x1ed9;t tr&#xe1;i &#x111;&#x1ec3; t&#x1ea1;o h&#xf3;a &#x111;&#x1a1;n theo kh&#xe1;ch h&#xe0;ng &#x111;&#xe3; ch&#x1ecd;n"/>
                                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                                       <TableColumnModel selectionModel="0">
                                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
@@ -2243,17 +2238,6 @@
                                 <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_TimSoDienThoaiKhachHang_KhachHangKeyReleased"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JButton" name="btn_ThemKhachHangVaoHoaDon_KhachHang">
-                              <Properties>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Arial" size="14" style="1"/>
-                                </Property>
-                                <Property name="text" type="java.lang.String" value="T&#x1ea1;o h&#xf3;a &#x111;&#x1a1;n"/>
-                              </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_ThemKhachHangVaoHoaDon_KhachHangActionPerformed"/>
-                              </Events>
-                            </Component>
                           </SubComponents>
                         </Container>
                         <Container class="javax.swing.JPanel" name="jPanel18">
@@ -2270,6 +2254,7 @@
                                   <Font name="Arial" size="14" style="1"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Th&#xea;m"/>
+                                <Property name="enabled" type="boolean" value="false"/>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_ThemKhachHang_KhachHangActionPerformed"/>
@@ -2281,6 +2266,7 @@
                                   <Font name="Arial" size="14" style="1"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="C&#x1ead;p nh&#x1ead;t"/>
+                                <Property name="enabled" type="boolean" value="false"/>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_CapNhatKhachHang_KhachHangActionPerformed"/>
@@ -2292,6 +2278,7 @@
                                   <Font name="Arial" size="14" style="1"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="X&#xf3;a"/>
+                                <Property name="enabled" type="boolean" value="false"/>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_XoaKhachHang_KhachHangActionPerformed"/>
@@ -2314,33 +2301,18 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jScrollPane19" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="202" max="-2" attributes="0"/>
-                                          <Component id="txt_TimSoDienThoaiKhachHangDaXoa_KhachHang" min="-2" pref="424" max="-2" attributes="0"/>
-                                          <EmptySpace pref="102" max="32767" attributes="0"/>
-                                          <Component id="btn_KhoiPhucKhachHang_KhachHang" min="-2" pref="147" max="-2" attributes="0"/>
-                                          <EmptySpace pref="250" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jScrollPane19" pref="1082" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="txt_TimSoDienThoaiKhachHangDaXoa_KhachHang" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                      <Component id="btn_KhoiPhucKhachHang_KhachHang" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane19" min="-2" pref="495" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jScrollPane19" pref="518" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2363,6 +2335,7 @@
                                     <Column editable="false" title="S&#x1ed0; &#x110;I&#x1ec6;N THO&#x1ea0;I" type="java.lang.Object"/>
                                   </Table>
                                 </Property>
+                                <Property name="toolTipText" type="java.lang.String" value="Nh&#x1ea5;p &#x111;&#xfa;p chu&#x1ed9;t tr&#xe1;i &#x111;&#x1ec3; kh&#xf4;i ph&#x1ee5;c kh&#xe1;ch h&#xe0;ng &#x111;&#xe3; ch&#x1ecd;n"/>
                                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                                   <TableColumnModel selectionModel="0">
                                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
@@ -2391,31 +2364,12 @@
                                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tbl_DSKhachHangDaXoa_KhachHangMouseClicked"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>
-                        <Component class="javax.swing.JTextField" name="txt_TimSoDienThoaiKhachHangDaXoa_KhachHang">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Arial" size="14" style="1"/>
-                            </Property>
-                          </Properties>
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_TimSoDienThoaiKhachHangDaXoa_KhachHangActionPerformed"/>
-                            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_TimSoDienThoaiKhachHangDaXoa_KhachHangKeyReleased"/>
-                          </Events>
-                        </Component>
-                        <Component class="javax.swing.JButton" name="btn_KhoiPhucKhachHang_KhachHang">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Arial" size="14" style="1"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="Kh&#xf4;i ph&#x1ee5;c"/>
-                          </Properties>
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_KhoiPhucKhachHang_KhachHangActionPerformed"/>
-                          </Events>
-                        </Component>
                       </SubComponents>
                     </Container>
                   </SubComponents>
@@ -2521,7 +2475,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="12" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -4001,6 +3955,7 @@
                               <Font name="Tahoma" size="14" style="1"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="T&#xed;nh L&#x1b0;&#x1a1;ng"/>
+                            <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_TinhLuong_LuongActionPerformed"/>
@@ -4012,6 +3967,7 @@
                               <Font name="Tahoma" size="14" style="1"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="C&#x1ead;p Nh&#x1ead;t L&#x1b0;&#x1a1;ng"/>
+                            <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_CapNhatLuong_LuongActionPerformed"/>
@@ -4023,6 +3979,7 @@
                               <Font name="Tahoma" size="14" style="1"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Nh&#x1ead;n L&#x1b0;&#x1a1;ng"/>
+                            <Property name="enabled" type="boolean" value="false"/>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_NhanLuong_LuongActionPerformed"/>
@@ -4042,6 +3999,7 @@
                         </Property>
                       </Properties>
                       <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="cbo_MaNhanVien_LuongMouseClicked"/>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbo_MaNhanVien_LuongActionPerformed"/>
                       </Events>
                       <AuxValues>
@@ -4323,6 +4281,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="X"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_TimKiemLuongTheoNgay_LuongActionPerformed"/>
+                      </Events>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel54">
                       <Properties>
@@ -4339,7 +4300,7 @@
                         <Property name="rows" type="int" value="1"/>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JButton" name="btn_First_NhanVien3">
+                        <Component class="javax.swing.JButton" name="btn_First_Luong">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Arial" size="18" style="1"/>
@@ -4347,18 +4308,21 @@
                             <Property name="text" type="java.lang.String" value="|&lt;"/>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_First_NhanVien3ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_First_LuongActionPerformed"/>
                           </Events>
                         </Component>
-                        <Component class="javax.swing.JButton" name="btn_Prev_NhanVien3">
+                        <Component class="javax.swing.JButton" name="btn_Prev_Luong">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="&lt;&lt;"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Prev_LuongActionPerformed"/>
+                          </Events>
                         </Component>
-                        <Component class="javax.swing.JButton" name="btn_Next_NhanVien3">
+                        <Component class="javax.swing.JButton" name="btn_Next_Luong">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Arial" size="18" style="1"/>
@@ -4366,16 +4330,19 @@
                             <Property name="text" type="java.lang.String" value="&gt;&gt;"/>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Next_NhanVien3ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Next_LuongActionPerformed"/>
                           </Events>
                         </Component>
-                        <Component class="javax.swing.JButton" name="btn_Last_NhanVien3">
+                        <Component class="javax.swing.JButton" name="btn_Last_Luong">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="&gt;|"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Last_LuongActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -4445,12 +4412,12 @@
                                       <Group type="102" attributes="0">
                                           <Component id="jLabel132" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="cbo_NhanVien_NhanVien" min="-2" pref="190" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="txt_TimDiaChi_NhanVien" min="-2" pref="148" max="-2" attributes="0"/>
+                                          <Component id="cbo_NhanVien_NhanVien" min="-2" pref="86" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txt_TimDiaChi_NhanVien" min="-2" pref="148" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
                                           <Component id="jPanel49" min="-2" pref="382" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jScrollPane15" min="-2" pref="1012" max="-2" attributes="0"/>
@@ -4466,14 +4433,14 @@
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="jPanel49" alignment="0" pref="0" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="txt_TimDiaChi_NhanVien" alignment="3" max="32767" attributes="0"/>
+                                          <Component id="txt_TimDiaChi_NhanVien" alignment="3" pref="28" max="32767" attributes="0"/>
                                           <Component id="jLabel132" alignment="3" max="32767" attributes="0"/>
                                           <Component id="cbo_NhanVien_NhanVien" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                           <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane15" pref="198" max="32767" attributes="0"/>
+                                  <Component id="jScrollPane15" pref="197" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -4583,6 +4550,7 @@
                             </Property>
                           </Properties>
                           <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_TimDiaChi_NhanVienActionPerformed"/>
                             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_TimDiaChi_NhanVienKeyReleased"/>
                           </Events>
                         </Component>
@@ -4708,7 +4676,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace pref="58" max="32767" attributes="0"/>
+                                  <EmptySpace pref="65" max="32767" attributes="0"/>
                                   <Component id="jPanel46" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jPanel43" min="-2" max="-2" attributes="0"/>
@@ -4972,6 +4940,7 @@
                                   <Font name="Arial" size="18" style="1"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Th&#xea;m"/>
+                                <Property name="enabled" type="boolean" value="false"/>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Them_NhanVienActionPerformed"/>
@@ -4983,6 +4952,7 @@
                                   <Font name="Arial" size="18" style="1"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="C&#x1ead;p nh&#x1ead;t"/>
+                                <Property name="enabled" type="boolean" value="false"/>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_CapNhat_NhanVienActionPerformed"/>
@@ -6851,14 +6821,14 @@
                                           <Component id="btn_last_DSHoaDon_BanHang" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="30" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace pref="11" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jButton8" alignment="1" min="-2" pref="42" max="-2" attributes="0"/>
                                       <Group type="103" alignment="1" groupAlignment="3" attributes="0">
