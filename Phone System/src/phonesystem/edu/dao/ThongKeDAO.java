@@ -62,13 +62,13 @@ public class ThongKeDAO {
         return this.getListOfArray(sql, cols, ngayBatDau, ngayKetThuc);
     }
 
-//    public List<Object[]> getTongDoanhThu() {
-//
-//        String sql = "{CALL getTongDoanhThu}";
-//        String[] cols = {"TenSanPham", "TongDoanhThu"};
-//
-//        return this.getListOfArray(sql, cols);
-//    }
+    public List<Object[]> getTongDoanhThu() {
+
+        String sql = "{CALL getTongDoanhThu}";
+        String[] cols = {"TenSanPham", "TongDoanhThu"};
+
+        return this.getListOfArray(sql, cols);
+    }
 
     public List<Object[]> getThongKeFull() {
 

@@ -7,9 +7,7 @@ package phonesystem.edu.ultil;
 
 import java.awt.Color;
 import java.awt.Font;
-import javax.swing.JLabel;
 import javax.swing.JTable;
-import javax.swing.table.DefaultTableCellRenderer;
 
 /**
  *
@@ -18,12 +16,12 @@ import javax.swing.table.DefaultTableCellRenderer;
 public class TableEdit {
 
     public static void centerRendererTable(JTable tbl) {
-        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
-        centerRenderer.setHorizontalAlignment(JLabel.CENTER);
-        int column = tbl.getColumnCount();
-        for (int i = 0; i < column; i++) {
-            tbl.getColumnModel().getColumn(i).setCellRenderer(centerRenderer);
-        }
+//        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+//        centerRenderer.setHorizontalAlignment(JLabel.CENTER);
+//        int column = tbl.getColumnCount();
+//        for (int i = 0; i < column; i++) {
+//            tbl.getColumnModel().getColumn(i).setCellRenderer(centerRenderer);
+//        }
 
         tbl.getTableHeader().setBackground(new Color(97, 88, 152));
         tbl.getTableHeader().setForeground(new Color(240, 240, 240));

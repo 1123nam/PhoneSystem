@@ -2256,7 +2256,15 @@ public class Main_Frame extends javax.swing.JFrame {
             new String [] {
                 "MÃ NV", "TÊN ĐĂNG NHẬP", "VAI TRÒ"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tbl_DSDaCoTaiKhoan_TaiKhoan.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tbl_DSDaCoTaiKhoan_TaiKhoanMouseClicked(evt);
@@ -2339,7 +2347,15 @@ public class Main_Frame extends javax.swing.JFrame {
             new String [] {
                 "MÃ NV", "TÊN NV", "NGÀY SINH", "GIỚI TÍNH", "SĐT", "EMAIL", "ĐỊA CHỈ", "CCCD", "TRẠNG THÁI", "HÌNH ẢNH", "GHI CHÚ"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tbl_DSChuaTaiKhoan_TaiKhoan.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tbl_DSChuaTaiKhoan_TaiKhoanMouseClicked(evt);
@@ -2347,7 +2363,6 @@ public class Main_Frame extends javax.swing.JFrame {
         });
         jScrollPane12.setViewportView(tbl_DSChuaTaiKhoan_TaiKhoan);
         if (tbl_DSChuaTaiKhoan_TaiKhoan.getColumnModel().getColumnCount() > 0) {
-            tbl_DSChuaTaiKhoan_TaiKhoan.getColumnModel().getColumn(0).setResizable(false);
             tbl_DSChuaTaiKhoan_TaiKhoan.getColumnModel().getColumn(10).setResizable(false);
         }
 
@@ -5465,10 +5480,6 @@ public class Main_Frame extends javax.swing.JFrame {
             this.row_tbl_TaiKhoan = tbl_DSDaCoTaiKhoan_TaiKhoan.getSelectedRow();
             this.edit_DS_DaCoTaiKhoan_TaiKhoan();
             this.checkManager_action();
-
-            txt_TenDangNhap_TaiKhoan.setEditable(false);
-            txt_MatKhau_TaiKhoan.setEditable(false);
-            txt_Confirm_TaiKhoan.setEditable(false);
         }
     }//GEN-LAST:event_tbl_DSDaCoTaiKhoan_TaiKhoanMouseClicked
 
@@ -7152,8 +7163,15 @@ public class Main_Frame extends javax.swing.JFrame {
             rdo_NhanVien_TaiKhoan.setEnabled(false);
             btn_Xoa_TaiKhoan.setEnabled(false);
 
+            txt_TenDangNhap_TaiKhoan.setEditable(true);
+            txt_MatKhau_TaiKhoan.setEditable(true);
+            txt_Confirm_TaiKhoan.setEditable(true);
+
         } else {
             rdo_NhanVien_TaiKhoan.setEnabled(true);
+            txt_TenDangNhap_TaiKhoan.setEditable(false);
+            txt_MatKhau_TaiKhoan.setEditable(false);
+            txt_Confirm_TaiKhoan.setEditable(false);
         }
     }
 
@@ -7161,6 +7179,7 @@ public class Main_Frame extends javax.swing.JFrame {
         txt_TenDangNhap_TaiKhoan.setEditable(isEnabled);
         txt_MatKhau_TaiKhoan.setEditable(isEnabled);
         txt_Confirm_TaiKhoan.setEditable(isEnabled);
+        rdo_NhanVien_TaiKhoan.setSelected(isEnabled);
     }
 
     private boolean isNullOnTextFiled(JTextField... args) {
@@ -7573,7 +7592,6 @@ public class Main_Frame extends javax.swing.JFrame {
 //                txt_TienTraLai_Banhang.setText("0");
 //                return;
 //            }         
-//  
 
             txt_TienTraLai_Banhang.setText(String.valueOf(TienTraLai));
         } catch (NumberFormatException e) {
@@ -7730,7 +7748,6 @@ public class Main_Frame extends javax.swing.JFrame {
                     try {
                         if (soLuong_now <= 0) {
                             MsgBox.alert(this, "Sản phẩm đã hết, vui lòng nhập hàng hoặc xóa sản phẩm");
-                            tbl_DS_SanPham_BanHang.setValueAt(0, tbl_DS_SanPham_BanHang.getSelectedRow(), 2);
 //                    Remove rows one by one from the end of the table
                             DefaultTableModel model = (DefaultTableModel) this.tbl_DS_SanPham_BanHang.getModel();
                             int[] rows = tbl_DS_SanPham_BanHang.getSelectedRows();
@@ -7950,6 +7967,13 @@ public class Main_Frame extends javax.swing.JFrame {
         String maHD = lbl_MaHoaDon_BanHang.getText();
         String ghiChu = txt_GhiChu_BanHang.getText();
 
+        if(Double.parseDouble(txt_TienKhachDua_BanHang.getText()) < Double.parseDouble(lbl_TongTienThanhToan_BanHang.getText()) ){
+            MsgBox.alert(this, "Tiền khách đưa nhỏ hơn tiền thanh toán");
+            txt_TienKhachDua_BanHang.requestFocus();
+            btn_ThanhToan_BanHang.setEnabled(false);
+            return;
+        }
+        
         try {
             hdDAO.insert(hd);
 
@@ -8134,13 +8158,13 @@ public class Main_Frame extends javax.swing.JFrame {
                     g2d.drawString("              Cửa hàng điện thoại Vũ Trụ ", 12, y);
                     y += yShift;
                     g2d.drawString("               FPT Polytechnic Cần Thơ ", 12, y);
-                    y += yShift; 
+                    y += yShift;
                     g2d.drawString("          Nguyễn Văn Linh Ninh Kiều, Cần Thơ ", 12, y);
-                    y += yShift+7;
+                    y += yShift + 7;
                     g2d.drawString("                   HÓA ĐƠN THANH TOÁN      ", 12, y);
                     y += yShift + 10;
                     g2d.drawString(" Mã hóa đơn:                          " + invoice_ID, 12, y);
-                    y += yShift; 
+                    y += yShift;
                     g2d.drawString(" Tên nhân viên:                      " + invoice_Emp, 12, y);
                     y += yShift;
                     g2d.drawString(" Tên khách hàng:                   " + invoice_CosName, 12, y);
@@ -8214,7 +8238,7 @@ public class Main_Frame extends javax.swing.JFrame {
                     row[0], row[1], row[2], row[3], String.format("%.1f", row[4])
                 });
             }
-            
+
             tbl_DSHoaDonChiTiet_BanHang.setRowSelectionInterval(0, 0);
         } catch (Exception e) {
             MsgBox.alert(this, "Lỗi fill Danh sách hóa đơn chi tiết");
@@ -9127,16 +9151,17 @@ public class Main_Frame extends javax.swing.JFrame {
         }
     }
 
-//    private void fillChart_Tong() {
-//        pieChart_Tong.clearData();
-//        List<Object[]> list = thongKeDAO.getTongDoanhThu();
-//        for (Object[] o : list) {
-//            if (o[0].equals("null") && o[1].equals("null")) {
-//                return;
-//            }
-//            pieChart_Tong.addData(new ModelPieChart(o[0].toString(), Double.parseDouble(o[1].toString()), getRandomColor()));
-//        }
-//    }
+    private void fillChart_Tong() {
+        pieChart_Tong.clearData();
+        List<Object[]> list = thongKeDAO.getTongDoanhThu();
+        for (Object[] o : list) {
+            if (o[0].equals("null") && o[1].equals("null")) {
+                return;
+            }
+            pieChart_Tong.addData(new ModelPieChart(o[0].toString(), Double.parseDouble(o[1].toString()), getRandomColor()));
+        }
+    }
+
     private Color getRandomColor() {
         Random rand = new Random();
         float r = rand.nextFloat();
