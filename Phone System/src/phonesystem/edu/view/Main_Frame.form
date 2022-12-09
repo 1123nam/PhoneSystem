@@ -2034,8 +2034,10 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jScrollPane18" max="32767" attributes="0"/>
                                           <Group type="102" attributes="0">
-                                              <Component id="txt_TimSoDienThoaiKhachHang_KhachHang" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="jLabel2" min="-2" pref="68" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="txt_TimSoDienThoaiKhachHang_KhachHang" min="-2" pref="136" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="jPanel50" pref="344" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -2046,10 +2048,18 @@
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="txt_TimSoDienThoaiKhachHang_KhachHang" min="-2" pref="30" max="-2" attributes="0"/>
-                                          <Component id="jPanel50" pref="0" max="32767" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                              <Component id="jPanel50" pref="30" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="txt_TimSoDienThoaiKhachHang_KhachHang" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jScrollPane18" pref="438" max="32767" attributes="0"/>
@@ -2122,7 +2132,6 @@
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Arial" size="14" style="1"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="Nh&#x1ead;p s&#x1ed1; &#x111;i&#x1ec7;n tho&#x1ea1;i kh&#xe1;ch h&#xe0;ng"/>
                               </Properties>
                               <Events>
                                 <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_TimSoDienThoaiKhachHang_KhachHangFocusGained"/>
@@ -2192,25 +2201,53 @@
                                 </Component>
                               </SubComponents>
                             </Container>
+                            <Component class="javax.swing.JLabel" name="jLabel2">
+                              <Properties>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Arial" size="14" style="1"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="T&#xec;m SDT"/>
+                              </Properties>
+                            </Component>
                           </SubComponents>
                         </Container>
                         <Container class="javax.swing.JPanel" name="jPanel18">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="40" y="360" width="370" height="52"/>
+                              <AbsoluteConstraints x="40" y="390" width="400" height="52"/>
                             </Constraint>
                           </Constraints>
 
-                          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
-                            <Property name="columns" type="int" value="0"/>
-                            <Property name="horizontalGap" type="int" value="25"/>
-                            <Property name="rows" type="int" value="1"/>
+                          <Layout>
+                            <DimensionLayout dim="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="btn_ThemKhachHang_KhachHang" min="-2" pref="106" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                      <Component id="btn_CapNhatKhachHang_KhachHang" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Component id="btn_XoaKhachHang_KhachHang" pref="117" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                            </DimensionLayout>
+                            <DimensionLayout dim="1">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="btn_CapNhatKhachHang_KhachHang" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                                      <Component id="btn_ThemKhachHang_KhachHang" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="btn_XoaKhachHang_KhachHang" min="-2" pref="52" max="-2" attributes="0"/>
+                              </Group>
+                            </DimensionLayout>
                           </Layout>
                           <SubComponents>
                             <Component class="javax.swing.JButton" name="btn_ThemKhachHang_KhachHang">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Arial" size="14" style="1"/>
+                                </Property>
+                                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                  <Image iconType="3" name="/phonesystem/edu/img/icons8_add_new_30px.png"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Th&#xea;m"/>
                                 <Property name="enabled" type="boolean" value="false"/>
@@ -2223,6 +2260,9 @@
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Arial" size="14" style="1"/>
+                                </Property>
+                                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                  <Image iconType="3" name="/phonesystem/edu/img/icons8_restart_30px.png"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="C&#x1ead;p nh&#x1ead;t"/>
                                 <Property name="enabled" type="boolean" value="false"/>
@@ -6774,7 +6814,7 @@
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Component id="txt_Loc_DSHoaDon_BanHang" min="-2" pref="181" max="-2" attributes="0"/>
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jButton8" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="btn_XoaHoaDon" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Component id="jPanel36" min="-2" max="-2" attributes="0"/>
                                               <Component id="jScrollPane10" alignment="0" min="-2" pref="1022" max="-2" attributes="0"/>
@@ -6800,7 +6840,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jButton8" alignment="1" min="-2" pref="42" max="-2" attributes="0"/>
+                                      <Component id="btn_XoaHoaDon" alignment="1" min="-2" pref="42" max="-2" attributes="0"/>
                                       <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                           <Component id="jLabel137" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="cbo_loc_DSHoaDon_BanHang" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -6881,7 +6921,7 @@
                             </Component>
                           </SubComponents>
                         </Container>
-                        <Component class="javax.swing.JButton" name="jButton8">
+                        <Component class="javax.swing.JButton" name="btn_XoaHoaDon">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Segoe UI" size="14" style="1"/>
@@ -6892,7 +6932,7 @@
                             <Property name="text" type="java.lang.String" value="X&#xf3;a H&#xf3;a &#x110;&#x1a1;n"/>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_XoaHoaDonActionPerformed"/>
                           </Events>
                         </Component>
                         <Container class="javax.swing.JPanel" name="jPanel36">
@@ -7411,7 +7451,7 @@
                                           <Component id="txt_TimKhuyenMai_KhuyenMai" min="-2" pref="235" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="25" max="32767" attributes="0"/>
+                                  <EmptySpace pref="19" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -7431,7 +7471,7 @@
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jPanel33" min="-2" pref="497" max="-2" attributes="0"/>
+                                          <Component id="jPanel33" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace pref="51" max="32767" attributes="0"/>
@@ -7452,8 +7492,136 @@
                             </Property>
                           </Properties>
 
-                          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-                            <Property name="useNullLayout" type="boolean" value="false"/>
+                          <Layout>
+                            <DimensionLayout dim="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                              <Component id="jLabel65" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                              <Component id="txt_TenKhuyenMai_KhuyenMai" min="-2" pref="183" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                              <Component id="jLabel68" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="53" pref="53" max="-2" attributes="0"/>
+                                              <Component id="txt_GiamGia_KhuyenMai" min="-2" pref="183" max="-2" attributes="0"/>
+                                              <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                                              <Component id="jLabel95" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                              <Component id="jLabel69" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
+                                              <Component id="dcs_NgayBatDau_KhuyenMai" min="-2" pref="187" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+                                              <Component id="btn_Them_KhuyenMai" min="-2" pref="120" max="-2" attributes="0"/>
+                                              <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
+                                              <Component id="btn_CapNhat_KhuyenMai" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+                                              <Component id="btn_Xoa_KhuyenMai" min="-2" pref="120" max="-2" attributes="0"/>
+                                              <EmptySpace min="34" pref="34" max="-2" attributes="0"/>
+                                              <Component id="btn_Moi_KhuyenMai" min="-2" pref="120" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="jLabel77" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jLabel78" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jLabel79" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jScrollPane5" min="-2" pref="187" max="-2" attributes="0"/>
+                                                  <Component id="dcs_NgayKetThuc_KhuyenMai" min="-2" pref="187" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="rdo_DangHoatDong_KhuyenMai" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="rdo_NgungHoatDong" min="-2" pref="120" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                            </DimensionLayout>
+                            <DimensionLayout dim="1">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                                              <Component id="jLabel65" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="txt_TenKhuyenMai_KhuyenMai" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                                              <Component id="jLabel68" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="txt_GiamGia_KhuyenMai" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                                              <Component id="jLabel95" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel69" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dcs_NgayBatDau_KhuyenMai" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel77" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dcs_NgayKetThuc_KhuyenMai" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel78" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rdo_DangHoatDong_KhuyenMai" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rdo_NgungHoatDong" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="jLabel79" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                              <Component id="jScrollPane5" min="-2" pref="90" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace pref="31" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn_Them_KhuyenMai" min="-2" pref="42" max="-2" attributes="0"/>
+                                          <Component id="btn_CapNhat_KhuyenMai" min="-2" pref="42" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="btn_Xoa_KhuyenMai" min="-2" pref="37" max="-2" attributes="0"/>
+                                          <Component id="btn_Moi_KhuyenMai" min="-2" pref="37" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                            </DimensionLayout>
                           </Layout>
                           <SubComponents>
                             <Component class="javax.swing.JTextField" name="txt_TenKhuyenMai_KhuyenMai">
@@ -7463,91 +7631,46 @@
                               <Events>
                                 <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_TenKhuyenMai_KhuyenMaiKeyReleased"/>
                               </Events>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="109" y="29" width="183" height="-1"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel65">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="T&#xea;n khuy&#x1ebf;n m&#xe3;i"/>
                               </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="16" y="32" width="-1" height="-1"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_GiamGia_KhuyenMai">
                               <Properties>
                                 <Property name="toolTipText" type="java.lang.String" value="Gi&#x1ea3;m gi&#xe1; !!!"/>
                               </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="109" y="67" width="183" height="-1"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel68">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Gi&#x1ea3;m gi&#xe1;"/>
                               </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="16" y="70" width="-1" height="-1"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel69">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Ng&#xe0;y b&#x1eaf;t &#x111;&#x1ea7;u"/>
                               </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="16" y="105" width="-1" height="-1"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Component class="com.toedter.calendar.JDateChooser" name="dcs_NgayBatDau_KhuyenMai">
                               <Properties>
                                 <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
                               </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="109" y="105" width="187" height="-1"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel77">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Ng&#xe0;y k&#x1ebf;t th&#xfa;c"/>
                               </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="16" y="136" width="-1" height="-1"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Component class="com.toedter.calendar.JDateChooser" name="dcs_NgayKetThuc_KhuyenMai">
                               <Properties>
                                 <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
                               </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="109" y="136" width="187" height="-1"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel78">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Tr&#x1ea1;ng th&#xe1;i"/>
                               </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="16" y="177" width="-1" height="-1"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="rdo_DangHoatDong_KhuyenMai">
                               <Properties>
@@ -7557,11 +7680,6 @@
                                 <Property name="selected" type="boolean" value="true"/>
                                 <Property name="text" type="java.lang.String" value="&#x110;ang ho&#x1ea1;t &#x111;&#x1ed9;ng"/>
                               </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="110" y="200" width="-1" height="-1"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="rdo_NgungHoatDong">
                               <Properties>
@@ -7570,31 +7688,16 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Ng&#x1eeb;ng ho&#x1ea1;t &#x111;&#x1ed9;ng"/>
                               </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="230" y="200" width="110" height="-1"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel79">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Ghi ch&#xfa;"/>
                               </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="20" y="240" width="-1" height="-1"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Container class="javax.swing.JScrollPane" name="jScrollPane5">
                               <AuxValues>
                                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                               </AuxValues>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="110" y="260" width="187" height="90"/>
-                                </Constraint>
-                              </Constraints>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                               <SubComponents>
@@ -7622,11 +7725,6 @@
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Them_KhuyenMaiActionPerformed"/>
                               </Events>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="50" y="370" width="106" height="42"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JButton" name="btn_CapNhat_KhuyenMai">
                               <Properties>
@@ -7644,11 +7742,6 @@
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_CapNhat_KhuyenMaiActionPerformed"/>
                               </Events>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="190" y="370" width="106" height="42"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JButton" name="btn_Xoa_KhuyenMai">
                               <Properties>
@@ -7666,11 +7759,6 @@
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Xoa_KhuyenMaiActionPerformed"/>
                               </Events>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="50" y="430" width="106" height="37"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JButton" name="btn_Moi_KhuyenMai">
                               <Properties>
@@ -7685,11 +7773,6 @@
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Moi_KhuyenMaiActionPerformed"/>
                               </Events>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="190" y="430" width="106" height="37"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel95">
                               <Properties>
@@ -7698,11 +7781,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="VND"/>
                               </Properties>
-                              <Constraints>
-                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                                  <AbsoluteConstraints x="296" y="69" width="-1" height="-1"/>
-                                </Constraint>
-                              </Constraints>
                             </Component>
                           </SubComponents>
                         </Container>

@@ -41,7 +41,9 @@ public class ChonKhuyenMai extends javax.swing.JDialog {
             Object[] row = {km.getTenKhuyenMai(), km.getGiaGiam(), ngayBatDau,
                 ngayKetThuc, km.getTrangThai() ? "Đang hoạt động" : "Ngừng hoạt động", km.getGhiChu()
             };
-            model.addRow(row);
+            if (km.getTrangThai() == true) {
+                model.addRow(row);
+            }
         }
     }
 
