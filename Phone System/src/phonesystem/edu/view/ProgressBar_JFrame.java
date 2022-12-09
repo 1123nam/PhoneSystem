@@ -95,7 +95,7 @@ public final class ProgressBar_JFrame extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/phonesystem/edu/img/logo_fpt_mini-size.png"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 160, 60));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 160, 60));
         jPanel2.add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 620, -1));
 
         lblPercent.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N

@@ -7253,6 +7253,7 @@ public class Main_Frame extends javax.swing.JFrame {
     }
 
     private static final String USERNAME_PATTERN = "^[a-z0-9.-_]{3,15}$";
+    private static final String PASSWORD_PATTERN = "^[a-z0-9.-_]{3,15}$";
     
     private boolean checkForm_TaiKhoan() {
         if (tbl_DSChuaTaiKhoan_TaiKhoan.getSelectedRow() == -1) {
@@ -7271,6 +7272,14 @@ public class Main_Frame extends javax.swing.JFrame {
             MsgBox.alert(this, "Tên đăng nhập không chứa kí tự đặt biệt và có độ dài từ 3-15 kí tự"
                     + "\nVD: AdminPhoneSys");
             txt_TenDangNhap_TaiKhoan.requestFocus();
+            return false;
+        }
+        
+        Pattern pattern_MatKhau = Pattern.compile(PASSWORD_PATTERN);
+        if(!pattern_MatKhau.matcher(txt_MatKhau_TaiKhoan.getText()).matches()){
+            MsgBox.alert(this, "Mật khẩu không chứa kí tự đặt biệt và có độ dài từ 3-15 kí tự"
+                    + "\n VD: 123456 hoặc Admin12345");
+            txt_MatKhau_TaiKhoan.requestFocus();
             return false;
         }
         
@@ -7297,6 +7306,13 @@ public class Main_Frame extends javax.swing.JFrame {
     }
 
     private void update_tbl_DaCoTaiKhoan_TaiKhoan() {
+        isNullOnTextFiled(txt_TenDangNhap_TaiKhoan,txt_MatKhau_TaiKhoan,txt_Confirm_TaiKhoan);
+        if(txt_Confirm_TaiKhoan.getText().equals(txt_MatKhau_TaiKhoan.getText())){
+            MsgBox.alert(this, "Mật khẩu xác nhận không đúng");
+            txt_Confirm_TaiKhoan.requestFocus();
+            return;
+        }    
+        
         TaiKhoan tk = getForm_ChuaCoTaiKhoan_TaiKhoan();
         try {
 
@@ -7412,7 +7428,7 @@ public class Main_Frame extends javax.swing.JFrame {
             MsgBox.alert(this, "Không để trống mật khẩu");
             return false;
         }
-
+        
         if (!Auth.getMatKhau_TaiKhoan().equalsIgnoreCase(txt_MatKhau_HeThong.getText())) {
             MsgBox.alert(this, "Sai mật khẩu!");
             txt_MatKhau_HeThong.requestFocus();
@@ -7425,6 +7441,14 @@ public class Main_Frame extends javax.swing.JFrame {
             return false;
         } else if (txt_MatKhauMoi_HeThong.getText().equals(txt_MatKhau_HeThong.getText())) {
             MsgBox.alert(this, "Mật khẩu mới không được trùng với mật khẩu cũ");
+            txt_MatKhauMoi_HeThong.requestFocus();
+            return false;
+        }
+              
+        Pattern pattern_MatKhau = Pattern.compile(PASSWORD_PATTERN);
+        if(!pattern_MatKhau.matcher(txt_MatKhauMoi_HeThong.getText()).matches()){
+            MsgBox.alert(this, "Mật khẩu không chứa kí tự đặt biệt và có độ dài từ 3-15 kí tự"
+                    + "\n VD: 123456 hoặc Admin12345");
             txt_MatKhauMoi_HeThong.requestFocus();
             return false;
         }
