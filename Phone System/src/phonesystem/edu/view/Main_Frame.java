@@ -3631,13 +3631,13 @@ public class Main_Frame extends javax.swing.JFrame {
         txt_MaSanPham_SanPham.setEditable(false);
         jPanel24.add(txt_MaSanPham_SanPham, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 47, 183, -1));
 
-        txt_TenSanPham_SanPham.setToolTipText("Vui lòng nhập Tên sản phẩm !!!");
+        txt_TenSanPham_SanPham.setToolTipText("Tên sản phẩm !!!");
         jPanel24.add(txt_TenSanPham_SanPham, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 75, 183, -1));
 
-        txt_SoLuong_SanPham.setToolTipText("Vui lòng nhập Số lượng !!!");
+        txt_SoLuong_SanPham.setToolTipText("Số lượng !!!");
         jPanel24.add(txt_SoLuong_SanPham, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 109, 183, -1));
 
-        txt_DonGia_SanPham.setToolTipText("Vui lòng nhập Đơn giá !!!");
+        txt_DonGia_SanPham.setToolTipText("Đơn giá !!!");
         jPanel24.add(txt_DonGia_SanPham, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 139, 183, -1));
 
         cbo_HangSanXuat_SanPham.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -3916,7 +3916,7 @@ public class Main_Frame extends javax.swing.JFrame {
         jPanel30Layout.setVerticalGroup(
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel30Layout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_First_SanPham_DaXoa)
                     .addComponent(btn_Last_SanPham_DaXoa)
@@ -4346,7 +4346,7 @@ public class Main_Frame extends javax.swing.JFrame {
         jPanel34Layout.setVerticalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel34Layout.createSequentialGroup()
-                .addContainerGap(9, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4526,7 +4526,7 @@ public class Main_Frame extends javax.swing.JFrame {
         jPanel33.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Quản lý khuyến mãi", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 16), new java.awt.Color(34, 51, 102))); // NOI18N
         jPanel33.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txt_TenKhuyenMai_KhuyenMai.setToolTipText("Vui lòng nhập Tên khuyến mãi !!!");
+        txt_TenKhuyenMai_KhuyenMai.setToolTipText("Tên khuyến mãi !!!");
         txt_TenKhuyenMai_KhuyenMai.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_TenKhuyenMai_KhuyenMaiKeyReleased(evt);
@@ -4537,7 +4537,7 @@ public class Main_Frame extends javax.swing.JFrame {
         jLabel65.setText("Tên khuyến mãi");
         jPanel33.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 32, -1, -1));
 
-        txt_GiamGia_KhuyenMai.setToolTipText("Vui lòng nhập Giảm giá !!!");
+        txt_GiamGia_KhuyenMai.setToolTipText("Giảm giá !!!");
         jPanel33.add(txt_GiamGia_KhuyenMai, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 67, 183, -1));
 
         jLabel68.setText("Giảm giá");
@@ -5823,7 +5823,7 @@ public class Main_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_tbl_DanhSachKhuyenMaiCoSanPham_KhuyenMaiMouseClicked
 
     private void btn_CapNhat_KhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CapNhat_KhuyenMaiActionPerformed
-        if (row_tbl_KhuyenMai > 0) {
+        if (row_tbl_KhuyenMai >= 0) {
             if (isNullOnTextFiled(txt_GiamGia_KhuyenMai)) {
                 if (kiemTraKhuyenMai() == true) {
                     this.update_KhuyenMai();
@@ -5948,7 +5948,7 @@ public class Main_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_DiaChi_NhanVienFocusLost
 
     private void txt_Email_NhanVienFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_Email_NhanVienFocusLost
-       
+
     }//GEN-LAST:event_txt_Email_NhanVienFocusLost
 
     private void txt_CCCD_NhanVienKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_CCCD_NhanVienKeyReleased
@@ -6560,6 +6560,10 @@ public class Main_Frame extends javax.swing.JFrame {
 
         TableEdit.centerRendererTable(tbl_DanhSachSanPham_SanPham);
         TableEdit.centerRendererTable(tbl_DanhSachSanPham_DaXoa_SanPham);
+        
+        btn_Them_SanPham.setEnabled(false);
+        btn_CapNhat_SanPham.setEnabled(false);
+        btn_Xoa_SanPham.setEnabled(false);
     }
 
     private void fillTable_SanPham() {
@@ -6896,7 +6900,7 @@ public class Main_Frame extends javax.swing.JFrame {
         }
         lbl_NgayLamViec_DiemDanh.setText(XDate.toString(new Date(), "dd/MM/yyyy"));
 
-        if ((hInt >= 7 && hInt < 8 && mInt <= 30 && isAM == true) || (hInt >= 13 && hInt < 22 && mInt <= 30 && isAM == false)) {
+        if ((hInt >= 7 && hInt < 8 && mInt <= 30 && isAM == true) || (hInt >= 13 && hInt < 14 && mInt <= 30 && isAM == false)) {
             btn_DiemDanh_DiemDanh.setEnabled(true);
         } else {
             btn_DiemDanh_DiemDanh.setEnabled(false);
@@ -6916,6 +6920,17 @@ public class Main_Frame extends javax.swing.JFrame {
         TableEdit.centerRendererTable(tbl_DanhSachKhuyenMaiCoSanPham_KhuyenMai);
         TableEdit.centerRendererTable(tbl_DanhSachSanPham_KhuyenMai);
         TableEdit.centerRendererTable(tbl_DanhSachKhuyenMai_KhuyenMai);
+
+        Date ngay = new Date();
+        kmDAO.updateTrangThaiFalse(ngay);
+        kmDAO.updateTrangThaiTrue(ngay);
+
+        rdo_DangHoatDong_KhuyenMai.setEnabled(false);
+        rdo_NgungHoatDong.setEnabled(false);
+        
+        btn_Them_KhuyenMai.setEnabled(false);
+        btn_CapNhat_KhuyenMai.setEnabled(false);
+        btn_Xoa_KhuyenMai.setEnabled(false);
     }
 
     DefaultTableModel model_KhuyenMai;
@@ -7024,6 +7039,11 @@ public class Main_Frame extends javax.swing.JFrame {
         KhuyenMai km = getForm_KhuyenMai();
         try {
             kmDAO.update(km);
+
+            Date ngay = new Date();
+            kmDAO.updateTrangThaiFalse(ngay);
+            kmDAO.updateTrangThaiTrue(ngay);
+
             this.fillTable_KhuyenMai();
             this.clearForm_KhuyenMai();
             MsgBox.alert(this, "Cập nhật Sản phẩm thành công!");
@@ -7254,7 +7274,7 @@ public class Main_Frame extends javax.swing.JFrame {
 
     private static final String USERNAME_PATTERN = "^[a-z0-9.-_]{3,15}$";
     private static final String PASSWORD_PATTERN = "^[a-z0-9.-_]{3,15}$";
-    
+
     private boolean checkForm_TaiKhoan() {
         if (tbl_DSChuaTaiKhoan_TaiKhoan.getSelectedRow() == -1) {
             MsgBox.alert(this, "Vui lòng chọn một nhân viên trên bảng chưa có tài khoản");
@@ -7266,23 +7286,23 @@ public class Main_Frame extends javax.swing.JFrame {
             txt_Confirm_TaiKhoan.requestFocus();
             return false;
         }
-        
+
         Pattern pattern_TenDangNhap = Pattern.compile(USERNAME_PATTERN);
-        if(!pattern_TenDangNhap.matcher(txt_TenDangNhap_TaiKhoan.getText()).matches()){
+        if (!pattern_TenDangNhap.matcher(txt_TenDangNhap_TaiKhoan.getText()).matches()) {
             MsgBox.alert(this, "Tên đăng nhập không chứa kí tự đặt biệt và có độ dài từ 3-15 kí tự"
                     + "\nVD: AdminPhoneSys");
             txt_TenDangNhap_TaiKhoan.requestFocus();
             return false;
         }
-        
+
         Pattern pattern_MatKhau = Pattern.compile(PASSWORD_PATTERN);
-        if(!pattern_MatKhau.matcher(txt_MatKhau_TaiKhoan.getText()).matches()){
+        if (!pattern_MatKhau.matcher(txt_MatKhau_TaiKhoan.getText()).matches()) {
             MsgBox.alert(this, "Mật khẩu không chứa kí tự đặt biệt và có độ dài từ 3-15 kí tự"
                     + "\n VD: 123456 hoặc Admin12345");
             txt_MatKhau_TaiKhoan.requestFocus();
             return false;
         }
-        
+
         return true;
     }
 
@@ -7306,13 +7326,13 @@ public class Main_Frame extends javax.swing.JFrame {
     }
 
     private void update_tbl_DaCoTaiKhoan_TaiKhoan() {
-        isNullOnTextFiled(txt_TenDangNhap_TaiKhoan,txt_MatKhau_TaiKhoan,txt_Confirm_TaiKhoan);
-        if(txt_Confirm_TaiKhoan.getText().equals(txt_MatKhau_TaiKhoan.getText())){
+        isNullOnTextFiled(txt_TenDangNhap_TaiKhoan, txt_MatKhau_TaiKhoan, txt_Confirm_TaiKhoan);
+        if (txt_Confirm_TaiKhoan.getText().equals(txt_MatKhau_TaiKhoan.getText())) {
             MsgBox.alert(this, "Mật khẩu xác nhận không đúng");
             txt_Confirm_TaiKhoan.requestFocus();
             return;
-        }    
-        
+        }
+
         TaiKhoan tk = getForm_ChuaCoTaiKhoan_TaiKhoan();
         try {
 
@@ -7428,7 +7448,7 @@ public class Main_Frame extends javax.swing.JFrame {
             MsgBox.alert(this, "Không để trống mật khẩu");
             return false;
         }
-        
+
         if (!Auth.getMatKhau_TaiKhoan().equalsIgnoreCase(txt_MatKhau_HeThong.getText())) {
             MsgBox.alert(this, "Sai mật khẩu!");
             txt_MatKhau_HeThong.requestFocus();
@@ -7444,9 +7464,9 @@ public class Main_Frame extends javax.swing.JFrame {
             txt_MatKhauMoi_HeThong.requestFocus();
             return false;
         }
-              
+
         Pattern pattern_MatKhau = Pattern.compile(PASSWORD_PATTERN);
-        if(!pattern_MatKhau.matcher(txt_MatKhauMoi_HeThong.getText()).matches()){
+        if (!pattern_MatKhau.matcher(txt_MatKhauMoi_HeThong.getText()).matches()) {
             MsgBox.alert(this, "Mật khẩu không chứa kí tự đặt biệt và có độ dài từ 3-15 kí tự"
                     + "\n VD: 123456 hoặc Admin12345");
             txt_MatKhauMoi_HeThong.requestFocus();
@@ -8540,7 +8560,6 @@ public class Main_Frame extends javax.swing.JFrame {
                 CardLayout playout = (CardLayout) pnl_MainDisplayCard.getLayout();
                 playout.show(pnl_MainDisplayCard, "card_TaiKhoan");
 
-               
                 txt_MaNV_TaiKhoan.setText(txt_MaNhanVien_NhanVien.getText());
                 txt_TenDangNhap_TaiKhoan.requestFocus();
             }
@@ -8569,7 +8588,7 @@ public class Main_Frame extends javax.swing.JFrame {
             MsgBox.alert(this, "Cập nhật thông tin Nhân Viên thành công !");
             this.fillToTable_NhanVien_NhanVien();
             this.FillTable_tbl_DSChuaTaiKhoan_TaiKhoan();
-            
+
             isUpdateNhanVien = false;
         } catch (Exception e) {
             MsgBox.alert(this, "Cập nhật thông tin Nhân Viên thất bại !");
@@ -8723,7 +8742,6 @@ public class Main_Frame extends javax.swing.JFrame {
         return true;
     }
 
-   
     //END_CARD_NHANVIEN
     //START_CARD_KHACHHANG
     DefaultTableModel tableModelKhachHang_KhachHang, tableModelKhachHang_KhachHang_DaXoa;

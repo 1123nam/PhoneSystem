@@ -8,11 +8,13 @@ package phonesystem.edu.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import phonesystem.edu.entity.KhuyenMai;
 import phonesystem.edu.ultil.jdbcHelper;
+
 /**
  *
  * @author NP
@@ -31,6 +33,10 @@ public class KhuyenMaiDAO extends PhoneSysDAO<KhuyenMai, String> {
     String SELECT_KHUYENMAI_BY_MASP = "SELECT * FROM KhuyenMai WHERE MaSanPham = ?";
     String SELECT_KHUYENMAI = "SELECT TenKhuyenMai,GiaGiam,NgayBatDau,NgayKetThuc,TrangThai,GhiChu FROM KhuyenMai\n"
             + "group by TenKhuyenMai,GiaGiam,NgayBatDau,NgayKetThuc,TrangThai,GhiChu";
+    String UPDATE_TRANGTHAI_False_SQL = "update KhuyenMai set TrangThai = 0\n"
+            + "where NgayBatDau >= ? and  NgayKetThuc >= ?";
+     String UPDATE_TRANGTHAI_True_SQL = "update KhuyenMai set TrangThai = 1\n"
+            + "where NgayBatDau <= ? and  NgayKetThuc >= ?";
 
     @Override
     public void insert(KhuyenMai entity) {
@@ -166,6 +172,21 @@ public class KhuyenMaiDAO extends PhoneSysDAO<KhuyenMai, String> {
 
     public List<KhuyenMai> selectLenTextFielKhuyenMaiByTenKM(String tenKM) {
         return this.selectBySql(SELECT_BY_TENKM_SQL, tenKM);
+    }
+    
+     public void updateTrangThaiFalse(Date ngay) {
+        try {
+            jdbcHelper.update(UPDATE_TRANGTHAI_False_SQL,ngay,ngay);    
+        } catch (SQLException ex) {
+            Logger.getLogger(HoaDonDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+      public void updateTrangThaiTrue(Date ngay) {
+        try {
+            jdbcHelper.update(UPDATE_TRANGTHAI_True_SQL,ngay,ngay);    
+        } catch (SQLException ex) {
+            Logger.getLogger(HoaDonDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 }
