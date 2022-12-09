@@ -3916,7 +3916,7 @@ public class Main_Frame extends javax.swing.JFrame {
         jPanel30Layout.setVerticalGroup(
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel30Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_First_SanPham_DaXoa)
                     .addComponent(btn_Last_SanPham_DaXoa)
@@ -4261,7 +4261,7 @@ public class Main_Frame extends javax.swing.JFrame {
             jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel36Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -4346,7 +4346,7 @@ public class Main_Frame extends javax.swing.JFrame {
         jPanel34Layout.setVerticalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel34Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(8, Short.MAX_VALUE)
                 .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -6560,7 +6560,7 @@ public class Main_Frame extends javax.swing.JFrame {
 
         TableEdit.centerRendererTable(tbl_DanhSachSanPham_SanPham);
         TableEdit.centerRendererTable(tbl_DanhSachSanPham_DaXoa_SanPham);
-        
+
         btn_Them_SanPham.setEnabled(false);
         btn_CapNhat_SanPham.setEnabled(false);
         btn_Xoa_SanPham.setEnabled(false);
@@ -6927,7 +6927,7 @@ public class Main_Frame extends javax.swing.JFrame {
 
         rdo_DangHoatDong_KhuyenMai.setEnabled(false);
         rdo_NgungHoatDong.setEnabled(false);
-        
+
         btn_Them_KhuyenMai.setEnabled(false);
         btn_CapNhat_KhuyenMai.setEnabled(false);
         btn_Xoa_KhuyenMai.setEnabled(false);
@@ -7392,6 +7392,37 @@ public class Main_Frame extends javax.swing.JFrame {
         btn_prev_DSChuaTaiKhoan_taikhoan.setEnabled(edit && !first);
         btn_next_DSChuaTaiKhoan_taikhoan.setEnabled(edit && !last);
         btn_last_DSChuaTaiKhoan_taikhoan.setEnabled(edit && !last);
+    }
+    
+     public void first_DS_ChuaTaiKhoan() {
+        this.row_DS_HoaDon_banhang = 0;
+        tbl_DSChuaTaiKhoan_TaiKhoan.setRowSelectionInterval(row_DS_HoaDon_banhang, row_DS_HoaDon_banhang);
+        this.updateStatus_DS_ChuaCoTaiKhoan_TaiKhoan();
+    }
+
+    public void prev_DS_ChuaTaiKhoan() {
+        if (this.row_tbl_TaiKhoan >= 0) {
+            this.row_tbl_TaiKhoan--;
+            tbl_DSChuaTaiKhoan_TaiKhoan.setRowSelectionInterval(row_tbl_TaiKhoan, row_tbl_TaiKhoan);
+            this.edit_DS_ChuaCoTaiKhoan_TaiKhoan();
+            this.updateStatus_DS_ChuaCoTaiKhoan_TaiKhoan();
+        }
+    }
+
+    public void next_DS_ChuaTaiKhoan() {
+        if (this.row_tbl_TaiKhoan < tbl_DSChuaTaiKhoan_TaiKhoan.getRowCount() - 1) {
+            this.row_tbl_TaiKhoan++;
+            tbl_DSChuaTaiKhoan_TaiKhoan.setRowSelectionInterval(row_tbl_TaiKhoan, row_tbl_TaiKhoan);
+            this.edit_DS_ChuaCoTaiKhoan_TaiKhoan();
+            this.updateStatus_DS_ChuaCoTaiKhoan_TaiKhoan();
+        }
+    }
+
+    public void last_DS_ChuaTaiKhoan() {
+        this.row_tbl_TaiKhoan = tbl_DSChuaTaiKhoan_TaiKhoan.getRowCount() - 1;
+        tbl_DSChuaTaiKhoan_TaiKhoan.setRowSelectionInterval(row_tbl_TaiKhoan, row_tbl_TaiKhoan);
+        this.edit_DS_ChuaCoTaiKhoan_TaiKhoan();
+        this.updateStatus_DS_ChuaCoTaiKhoan_TaiKhoan();
     }
 
     public void updateStatus_DS_ChuaCoTaiKhoan_TaiKhoan() {
@@ -8304,6 +8335,7 @@ public class Main_Frame extends javax.swing.JFrame {
         this.row_DS_HoaDon_banhang = 0;
         tbl_DSHoaDon_BanHang.setRowSelectionInterval(row_DS_HoaDon_banhang, row_DS_HoaDon_banhang);
         this.updateStatus_DSHoaDon_BanHang();
+        this.fillToTableDSHoaDonChiTiet_BanHang();
     }
 
     public void prev_DS_HoaDon_BanHang() {
@@ -8311,6 +8343,7 @@ public class Main_Frame extends javax.swing.JFrame {
             this.row_DS_HoaDon_banhang--;
             tbl_DSHoaDon_BanHang.setRowSelectionInterval(row_DS_HoaDon_banhang, row_DS_HoaDon_banhang);
             this.updateStatus_DSHoaDon_BanHang();
+            this.fillToTableDSHoaDonChiTiet_BanHang();
         }
     }
 
@@ -8319,6 +8352,7 @@ public class Main_Frame extends javax.swing.JFrame {
             this.row_DS_HoaDon_banhang++;
             tbl_DSHoaDon_BanHang.setRowSelectionInterval(row_DS_HoaDon_banhang, row_DS_HoaDon_banhang);
             this.updateStatus_DSHoaDon_BanHang();
+            this.fillToTableDSHoaDonChiTiet_BanHang();
         }
     }
 
@@ -8326,6 +8360,7 @@ public class Main_Frame extends javax.swing.JFrame {
         this.row_DS_HoaDon_banhang = tbl_DSHoaDon_BanHang.getRowCount() - 1;
         tbl_DSHoaDon_BanHang.setRowSelectionInterval(row_DS_HoaDon_banhang, row_DS_HoaDon_banhang);
         this.updateStatus_DSHoaDon_BanHang();
+        this.fillToTableDSHoaDonChiTiet_BanHang();
     }
 
     public void updateStatus_DSHoaDon_BanHang() {
