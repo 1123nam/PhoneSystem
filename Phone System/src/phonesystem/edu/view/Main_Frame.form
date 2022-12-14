@@ -4426,7 +4426,7 @@
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="jPanel49" alignment="0" pref="0" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="txt_TimDiaChi_NhanVien" alignment="3" pref="28" max="32767" attributes="0"/>
+                                          <Component id="txt_TimDiaChi_NhanVien" alignment="3" max="32767" attributes="0"/>
                                           <Component id="jLabel132" alignment="3" max="32767" attributes="0"/>
                                           <Component id="cbo_NhanVien_NhanVien" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                           <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -5721,7 +5721,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="269" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="288" max="-2" attributes="0"/>
                                       <Component id="btn_First_SanPham" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
                                       <Component id="btn_Previous_SanPham" min="-2" max="-2" attributes="0"/>
@@ -5742,15 +5742,15 @@
                                           <Component id="cbo_SanPham_SanPham" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jScrollPane2" min="-2" pref="211" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane2" min="-2" pref="188" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="btn_First_SanPham" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="btn_Last_SanPham" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="btn_Previous_SanPham" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="btn_Next_SanPham" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -7451,7 +7451,7 @@
                                           <Component id="txt_TimKhuyenMai_KhuyenMai" min="-2" pref="235" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="19" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -7467,14 +7467,14 @@
                                               <Component id="cbo_KhuyenMai_KhuyenMai" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jScrollPane1" pref="453" max="32767" attributes="0"/>
+                                          <Component id="jScrollPane1" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jPanel33" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="51" max="32767" attributes="0"/>
+                                  <EmptySpace pref="54" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>

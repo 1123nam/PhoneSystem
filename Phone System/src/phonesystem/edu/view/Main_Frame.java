@@ -31,13 +31,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
@@ -80,7 +78,6 @@ import phonesystem.edu.ultil.MsgBox;
 import phonesystem.edu.ultil.TableEdit;
 import phonesystem.edu.ultil.XDate;
 import phonesystem.edu.ultil.XImage;
-import phonesystem.edu.ultil.jdbcHelper;
 
 /**
  *
@@ -3106,7 +3103,7 @@ public class Main_Frame extends javax.swing.JFrame {
                 .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txt_TimDiaChi_NhanVien, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                        .addComponent(txt_TimDiaChi_NhanVien)
                         .addComponent(jLabel132, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(cbo_NhanVien_NhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton1)))
@@ -3796,7 +3793,7 @@ public class Main_Frame extends javax.swing.JFrame {
                         .addComponent(txt_TimSanPham_SanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(269, 269, 269)
+                .addGap(288, 288, 288)
                 .addComponent(btn_First_SanPham)
                 .addGap(74, 74, 74)
                 .addComponent(btn_Previous_SanPham)
@@ -3814,14 +3811,14 @@ public class Main_Frame extends javax.swing.JFrame {
                     .addComponent(jLabel133, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cbo_SanPham_SanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_First_SanPham)
                     .addComponent(btn_Last_SanPham)
                     .addComponent(btn_Previous_SanPham)
                     .addComponent(btn_Next_SanPham))
-                .addGap(12, 12, 12))
+                .addGap(41, 41, 41))
         );
 
         javax.swing.GroupLayout pnlThongTinSanPhamLayout = new javax.swing.GroupLayout(pnlThongTinSanPham);
@@ -4784,7 +4781,7 @@ public class Main_Frame extends javax.swing.JFrame {
                         .addComponent(cbo_KhuyenMai_KhuyenMai, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txt_TimKhuyenMai_KhuyenMai, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4797,11 +4794,11 @@ public class Main_Frame extends javax.swing.JFrame {
                             .addComponent(jLabel135, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(cbo_KhuyenMai_KhuyenMai, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         tab_KhuyenMai.addTab("Quản lý Khuyến Mãi", jPanel5);
@@ -5518,6 +5515,10 @@ public class Main_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_TimSoDienThoaiKhachHang_KhachHangActionPerformed
 
     private void btn_Them_TaiKhoanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Them_TaiKhoanActionPerformed
+        if (tbl_DSChuaTaiKhoan_TaiKhoan.getSelectedRow() == -1) {
+            MsgBox.alert(this, "Vui lòng chọn một nhân viên trên bảng chưa có tài khoản");
+            return;
+        }
         if (isNullOnTextFiled(txt_TenDangNhap_TaiKhoan, txt_MatKhau_TaiKhoan, txt_Confirm_TaiKhoan)) {
             this.insert_tbl_DaCoTaiKhoan_TaiKhoan();
         }
@@ -7270,6 +7271,11 @@ public class Main_Frame extends javax.swing.JFrame {
         if (Auth.isLogin()) {
             this.checkManager_action();
         }
+
+        btn_Xoa_TaiKhoan.setEnabled(false);
+        btn_Them_TaiKhoan.setEnabled(false);
+        btn_CapNhat_TaiKhoan.setEnabled(false);
+
     }
 
     private void checkManager_action() {
@@ -7388,11 +7394,6 @@ public class Main_Frame extends javax.swing.JFrame {
     private static final String PASSWORD_PATTERN = "^[a-z0-9.-_]{3,15}$";
 
     private boolean checkForm_TaiKhoan() {
-        if (tbl_DSChuaTaiKhoan_TaiKhoan.getSelectedRow() == -1) {
-            MsgBox.alert(this, "Vui lòng chọn một nhân viên trên bảng chưa có tài khoản");
-            return false;
-        }
-
         if (!txt_Confirm_TaiKhoan.getText().equals(txt_MatKhau_TaiKhoan.getText())) {
             MsgBox.alert(this, "Mật khẩu xác nhận không đúng");
             txt_Confirm_TaiKhoan.requestFocus();
@@ -8039,6 +8040,10 @@ public class Main_Frame extends javax.swing.JFrame {
     }
 
     private void HuyGioHang_BanHang() {
+        if(tbl_HoaDon_BanHang.getRowCount()==0){
+            return;
+        }
+        
         DefaultTableModel model = (DefaultTableModel) tbl_HoaDon_BanHang.getModel();
         model.setRowCount(0);
 
@@ -8490,6 +8495,11 @@ public class Main_Frame extends javax.swing.JFrame {
 //    DS hóa đơn 
     private void delete_DSHoaDon_BanHang() {
         try {
+
+            if (!Auth.isManager()) {
+                btn_XoaHoaDon.setEnabled(false);
+                return;
+            }
 
             String maHD = (String) tbl_DSHoaDon_BanHang.getValueAt(tbl_DSHoaDon_BanHang.getSelectedRow(), 0);
             hdDAO.delete(maHD);
